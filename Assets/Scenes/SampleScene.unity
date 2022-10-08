@@ -123,7 +123,15 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &340237643
+=======
+<<<<<<< HEAD
+--- !u!1 &189106854
+=======
+--- !u!1 &340237643
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,15 +139,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  - component: {fileID: 189106856}
+  - component: {fileID: 189106855}
+  m_Layer: 0
+  m_Name: Square (1)
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 340237644}
   - component: {fileID: 340237645}
   m_Layer: 0
   m_Name: Square
+<<<<<<< Updated upstream
+=======
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+--- !u!212 &189106855
+=======
+>>>>>>> Stashed changes
 --- !u!4 &340237644
 Transform:
   m_ObjectHideFlags: 0
@@ -156,12 +183,24 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &340237645
+<<<<<<< Updated upstream
+=======
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 340237643}
+=======
+<<<<<<< HEAD
+  m_GameObject: {fileID: 189106854}
+=======
+  m_GameObject: {fileID: 340237643}
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -196,7 +235,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+=======
+<<<<<<< HEAD
+  m_Sprite: {fileID: 21300000, guid: b42bde79c3fa33a488c908d8284f4cc2, type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -207,6 +254,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+--- !u!4 &189106856
+=======
+>>>>>>> Stashed changes
 --- !u!1 &463648868
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,11 +357,28 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &463648871
+<<<<<<< Updated upstream
+=======
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  m_GameObject: {fileID: 189106854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.8}
+  m_LocalScale: {x: 2.9, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 463648868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.62, y: -1.88, z: 0}
@@ -318,6 +388,10 @@ Transform:
   - {fileID: 542664028}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+<<<<<<< Updated upstream
+=======
+>>>>>>> 0763860210aa43e49bec1e4b0848d2e293a69831
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
