@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator anim;
 
-    private Queue<string> sentences;
+    public Queue<string> sentences;
 
     void Start() {
         sentences = new Queue<string>();
@@ -32,10 +32,10 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void DisplayNextSentence() {
-        if(sentences.Count == 0) {
+        /*if(sentences.Count == 0) {
             EndDialogue();
             return;
-        }
+        }*/
 
         string sentence = sentences.Dequeue();
 
