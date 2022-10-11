@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void StartDialogue(Dialogue dialogue) {
-        Debug.Log("Starting conversation with " + dialogue.name);
 
         anim.SetBool("IsOpen", true);
 
@@ -42,8 +41,6 @@ public class DialogueManager : MonoBehaviour {
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-
-        Debug.Log(sentence);
     }
 
     IEnumerator TypeSentence (string sentence) {
