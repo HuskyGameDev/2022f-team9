@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour {
 
@@ -8,10 +9,10 @@ public class DoorController : MonoBehaviour {
         if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerInv playerInv)) {
             if (playerInv.hasKey == true) {
                 Debug.Log("You win!");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             } else {
                 Debug.Log("Get the key first!");
             }
         }
     }
-
 }
