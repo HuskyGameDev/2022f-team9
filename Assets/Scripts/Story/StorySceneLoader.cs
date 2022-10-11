@@ -7,6 +7,6 @@ public class StorySceneLoader : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene("Sample Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }
