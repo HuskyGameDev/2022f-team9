@@ -10,7 +10,9 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator anim;
 
-    public Queue<string> sentences;
+    private Queue<string> sentences;
+
+    public int currentIndex;
 
     void Start() {
         sentences = new Queue<string>();
@@ -32,10 +34,13 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void DisplayNextSentence() {
-        /*if(sentences.Count == 0) {
+
+        if (sentences.Count == 0) {
             EndDialogue();
             return;
-        }*/
+        }
+
+        currentIndex = sentences.Count;
 
         string sentence = sentences.Dequeue();
 
@@ -47,12 +52,11 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.05f);
         }
     }
 
     void EndDialogue() {
-        Debug.Log("End of conversation.");
         anim.SetBool("IsOpen", false);
     }
 

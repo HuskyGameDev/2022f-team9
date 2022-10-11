@@ -1644,6 +1644,7 @@ MonoBehaviour:
   nameText: {fileID: 1755682710}
   dialogueText: {fileID: 1431745544}
   anim: {fileID: 923431096}
+  lastOfCurrentDialogue: 0
 --- !u!4 &930998951
 Transform:
   m_ObjectHideFlags: 0
@@ -3712,6 +3713,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1934385636}
   - component: {fileID: 1934385635}
+  - component: {fileID: 1934385638}
+  - component: {fileID: 1934385637}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -3731,7 +3734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece3dce519ce462408c35164cd62f8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dC: {fileID: 930998949}
+  dM: {fileID: 930998950}
+  cButton: {fileID: 467582296}
 --- !u!4 &1934385636
 Transform:
   m_ObjectHideFlags: 0
@@ -3747,6 +3751,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934385637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934385634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757e79d1ec43058488fa282632347936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+--- !u!114 &1934385638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934385634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757e79d1ec43058488fa282632347936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Observer
+    sentences:
+    - Congratulations
 --- !u!1 &2007063321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,6 +3834,7 @@ MonoBehaviour:
     - I wonder how you found yourself here, oh well, at least prove to me that you
       are worth my time.
     - Can you jump for me to prove your atheletic ability?
+    - Great job!
 --- !u!61 &2007063324
 BoxCollider2D:
   m_ObjectHideFlags: 0

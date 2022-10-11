@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour {
 
-    //"dC" stands for "DialogueController"
-    [SerializeField] GameObject dC;
     //"dM" stands for "DialogueManager"
-    private DialogueManager dM;
+    [SerializeField] DialogueManager dM;
+    //"cButton" stands for "ContinueButton"
+    [SerializeField] GameObject cButton;
 
-    private void Start() {
-        dM = dC.GetComponent<DialogueManager>();
-    }
+    private bool cont1, run1 = false;
 
     private void Update() {
-        if(dM.sentences.Count == 1) {
-
+        if (!run1 && dM.currentIndex == 2) {
+            cButton.SetActive(false);
+            run1 = true;
+            StartCoroutine(Delay());
         }
+
+        if (cont1 && Input.GetButtonDown("Jump")) {
+            cont1 = false;
+            dM.DisplayNextSentence();
+            cButton.SetActive(true);
+        }
+    }
+
+    private IEnumerator Delay() {
+        yield return new WaitForSeconds(3f);
+        cont1 = true;
     }
 
 }
