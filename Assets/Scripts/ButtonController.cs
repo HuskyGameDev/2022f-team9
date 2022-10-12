@@ -6,10 +6,8 @@ public class ButtonController : MonoBehaviour
 {
     public bool isPressed;
 
-    public void PressButton()
-    {
-        if (!isPressed)
-        {
+    public void PressButton() {
+        if (!isPressed) {
             isPressed = true;
             Debug.Log("Button was pressed");
         }

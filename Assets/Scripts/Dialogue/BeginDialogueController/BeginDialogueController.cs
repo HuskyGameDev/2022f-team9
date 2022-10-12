@@ -11,7 +11,7 @@ public class BeginDialogueController : MonoBehaviour {
             GetComponent<DialogueTrigger>().TriggerDialogue();
             button1.SetActive(true);
             button2.SetActive(true);
-            Destroy(gameObject);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 

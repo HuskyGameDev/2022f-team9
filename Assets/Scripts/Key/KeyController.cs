@@ -8,7 +8,7 @@ public class KeyController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Player") && collision.TryGetComponent(out PlayerInv playerInv)) {
             playerInv.hasKey = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

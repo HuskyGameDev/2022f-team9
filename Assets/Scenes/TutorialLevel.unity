@@ -512,7 +512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242519693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.59, y: -6.1, z: 0.20325956}
+  m_LocalPosition: {x: -3.59, y: -5.93, z: 0.20325956}
   m_LocalScale: {x: 4.828192, y: 0.6567637, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -842,6 +842,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467582296}
   m_CullTransparentMesh: 1
+--- !u!1 &614771107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 614771110}
+  - component: {fileID: 614771109}
+  - component: {fileID: 614771108}
+  m_Layer: 0
+  m_Name: Detector (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &614771108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614771107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1f41e2a9694894a9dc9347bcf8ea13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPlayer: 0
+--- !u!61 &614771109
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614771107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024829865, y: 0.062073708}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.3768272, y: 0.8758526}
+  m_EdgeRadius: 0
+--- !u!4 &614771110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614771107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.269, y: -7.974, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934385636}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633252957
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +1041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &690879289
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,8 +1096,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1158233459
-  m_SortingLayer: 7
+  m_SortingLayerID: -2112844095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 0143f9981c7ded943b89ea9113dcb600, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1736,7 +1808,7 @@ MonoBehaviour:
   nameText: {fileID: 1755682710}
   dialogueText: {fileID: 1431745544}
   anim: {fileID: 923431096}
-  currentIndex: 0
+  currentElement: 0
 --- !u!4 &930998951
 Transform:
   m_ObjectHideFlags: 0
@@ -1847,7 +1919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1008511913
 Transform:
   m_ObjectHideFlags: 0
@@ -1902,8 +1974,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1158233459
-  m_SortingLayer: 7
+  m_SortingLayerID: -2112844095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 0143f9981c7ded943b89ea9113dcb600, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1953,7 +2025,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011234245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1980,7 +2052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011234245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.131, y: -7.68, z: -10.071775}
+  m_LocalPosition: {x: 14.77, y: -7.68, z: -10.071775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2006,7 +2078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1067594386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2026,7 +2098,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067594385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2486,7 +2558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1381577836
 Transform:
   m_ObjectHideFlags: 0
@@ -2580,8 +2652,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1158233459
-  m_SortingLayer: 7
+  m_SortingLayerID: -2112844095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4038c98b0b60fa64d9bc51dc66637af4, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -2690,7 +2762,7 @@ GameObject:
   - component: {fileID: 1397608555}
   - component: {fileID: 1397608554}
   - component: {fileID: 1397608553}
-  - component: {fileID: 1397608552}
+  - component: {fileID: 1397608556}
   m_Layer: 5
   m_Name: RestartConversation
   m_TagString: Untagged
@@ -2719,25 +2791,6 @@ RectTransform:
   m_AnchoredPosition: {x: -404, y: 213.61046}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1397608552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397608550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757e79d1ec43058488fa282632347936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Observer
-    sentences:
-    - Hello there, welcome to the Lab...
-    - I wonder how you found yourself here, oh well, at least prove to me that you
-      are worth my time.
-    - Can you jump for me to prove your atheletic ability?
 --- !u!114 &1397608553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2782,9 +2835,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1397608552}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
+      - m_Target: {fileID: 1397608556}
+        m_TargetAssemblyTypeName: RestartButtonController, Assembly-CSharp
+        m_MethodName: RestartDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2832,6 +2885,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397608550}
   m_CullTransparentMesh: 1
+--- !u!114 &1397608556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397608550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0d1a93093d3a74c82d6a108db126dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginDialogue: {fileID: 2007063321}
+  cButton: {fileID: 467582296}
+  levelControllerObj: {fileID: 1934385634}
+  detector0: {fileID: 1518308788}
+  detector1: {fileID: 614771107}
+  key: {fileID: 0}
 --- !u!1 &1431745542
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3242,78 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &1518308788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518308791}
+  - component: {fileID: 1518308790}
+  - component: {fileID: 1518308789}
+  m_Layer: 0
+  m_Name: Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1518308789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518308788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1f41e2a9694894a9dc9347bcf8ea13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPlayer: 0
+--- !u!61 &1518308790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518308788}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024829865, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.3768272, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1518308791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518308788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.13, y: -4.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934385636}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526921045
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,8 +4317,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1934385636}
   - component: {fileID: 1934385635}
-  - component: {fileID: 1934385638}
-  - component: {fileID: 1934385637}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -4197,6 +4338,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dM: {fileID: 930998950}
   cButton: {fileID: 467582296}
+  rButton: {fileID: 1397608550}
+  key: {fileID: 1067594385}
+  player: {fileID: 868005603}
+  elevator: {fileID: 1011234245}
+  detector0: {fileID: 1518308788}
+  detector1: {fileID: 614771107}
+  cont: 0000000000
+  run: 000000000000
 --- !u!4 &1934385636
 Transform:
   m_ObjectHideFlags: 0
@@ -4208,41 +4357,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1518308791}
+  - {fileID: 614771110}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1934385637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934385634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757e79d1ec43058488fa282632347936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    sentences: []
---- !u!114 &1934385638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934385634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757e79d1ec43058488fa282632347936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Observer
-    sentences:
-    - Congratulations
 --- !u!1 &2007063321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,8 +4414,19 @@ MonoBehaviour:
     - Hello there, welcome to the Lab...
     - I wonder how you found yourself here, oh well, at least prove to me that you
       are worth my time.
-    - Can you jump for me to prove your atheletic ability?
+    - Can you jump for me to prove your atheletic ability? (Using Space)
     - Great job!
+    - Now, I must further examine your physical ability... Can you jump up to the
+      second platform for me?
+    - Bravo, now one last test...
+    - Can you crouch under the first platform for me? (Using Left Shift)
+    - Nicely done! Now we can begin the real fun...
+    - You see that key to the right of the second platform? Jump to confirm...
+    - Awesome, now, go grab it!
+    - Now that you have the key you are able to enter the... Elevator
+    - This will allow you to go to the next level, and possibly even the... Ground
+      Level
+    - Now, enter the elevator to begin your journey...
 --- !u!61 &2007063324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4439,7 +4570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2080386669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4517,8 +4648,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1158233459
-  m_SortingLayer: 7
+  m_SortingLayerID: -2112844095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4038c98b0b60fa64d9bc51dc66637af4, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}

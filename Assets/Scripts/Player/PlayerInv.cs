@@ -10,30 +10,23 @@ public class PlayerInv : MonoBehaviour {
     public KeyCode interactKey;
     public UnityEvent interactAction;
 
-    void Update()
-    {
-        if (isInRange)
-        {
-            if (Input.GetKeyDown(interactKey))
-            {
+    void Update() {
+        if (isInRange) {
+            if (Input.GetKeyDown(interactKey)) {
                 interactAction.Invoke();
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Player")) {
             isInRange = true;
             Debug.Log("Player in range");
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Player")) {
             isInRange = false;
             Debug.Log("Player not in range");
         }

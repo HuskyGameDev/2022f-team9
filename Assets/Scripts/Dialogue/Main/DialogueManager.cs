@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour {
 
     private Queue<string> sentences;
 
-    public int currentIndex;
+    public int currentElement = 0;
 
     void Start() {
         sentences = new Queue<string>();
@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour {
         }
 
         DisplayNextSentence();
+        currentElement = 0;
     }
 
     public void DisplayNextSentence() {
@@ -40,7 +41,7 @@ public class DialogueManager : MonoBehaviour {
             return;
         }
 
-        currentIndex = sentences.Count;
+        currentElement++;
 
         string sentence = sentences.Dequeue();
 
