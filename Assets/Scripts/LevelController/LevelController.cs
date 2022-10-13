@@ -19,6 +19,11 @@ public class LevelController : MonoBehaviour {
     [SerializeField] GameObject elevator;
     private PlayerInv playerInv;
 
+    [Header("Button for the key")]
+    [SerializeField] GameObject buttonBack;
+    [SerializeField] GameObject button;
+    [SerializeField] GameObject buttonInteraction;
+
     [Header("Detectors")]
     [SerializeField] GameObject detector0;
     [SerializeField] GameObject detector1;
@@ -70,7 +75,9 @@ public class LevelController : MonoBehaviour {
 
         if (!run[3] && dM.currentElement == 8) {
             run[3] = true;
-            key.SetActive(true);
+            buttonBack.SetActive(true);
+            button.SetActive(true);
+            buttonInteraction.SetActive(true);
             StartCoroutine(Delay(val => cont[3] = val));
         }
         if (cont[3] && Input.GetButtonDown("Jump")) {
