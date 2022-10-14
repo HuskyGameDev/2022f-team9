@@ -26,6 +26,9 @@ public class LevelOneControl : MonoBehaviour {
     public bool[] buts = { false, false, false, false };
 
 /*
+
+DIALOUGE CODE COMMENTED OUT UNTIL IT IS DETERMINED TO BE NEEDED OR NOT
+
     private void Start() {
         detector0Controller = detector0.GetComponent<DetectorController>();
         detector1Controller = detector1.GetComponent<DetectorController>();
