@@ -4015,7 +4015,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1934385634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c757b945ba8da1f418b8e9365b83355e, type: 3}
+  m_Script: {fileID: 11500000, guid: 860efbe5850917f4d8cc2bb08d5c4aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RButton: {fileID: 122160901}
@@ -4023,7 +4023,7 @@ MonoBehaviour:
   BButton: {fileID: 1066805429}
   YButton: {fileID: 1246153608}
   player: {fileID: 868005603}
-  elevator: {fileID: 1640373772}
+  elevator: {fileID: 1011234245}
   buts: 00000000
 --- !u!1 &2007063321
 GameObject:
