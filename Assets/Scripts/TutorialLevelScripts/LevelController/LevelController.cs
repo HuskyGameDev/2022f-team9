@@ -22,6 +22,7 @@ public class LevelController : MonoBehaviour {
     [Header("Button for the key")]
     [SerializeField] GameObject buttonBack;
     [SerializeField] GameObject button;
+    private ButtonController buttonController;
     [SerializeField] GameObject buttonInteraction;
 
     [Header("Detectors")]
@@ -37,6 +38,7 @@ public class LevelController : MonoBehaviour {
         detector0Controller = detector0.GetComponent<DetectorController>();
         detector1Controller = detector1.GetComponent<DetectorController>();
         playerInv = player.GetComponent<PlayerInv>();
+        buttonController = button.GetComponent<ButtonController>();
     }
 
     private void Update() {
@@ -78,16 +80,19 @@ public class LevelController : MonoBehaviour {
             buttonBack.SetActive(true);
             button.SetActive(true);
             buttonInteraction.SetActive(true);
+            cButton.SetActive(false);
             StartCoroutine(Delay(val => cont[3] = val));
         }
-        if (cont[3] && Input.GetButtonDown("Jump")) {
+        if (cont[3] && buttonController.isPressed) {
             cont[3] = false;
             StartCoroutine(NextSentenceDelay());
         }
         if (!run[4] && dM.currentElement == 9) {
             run[4] = true;
             cButton.SetActive(false);
-            StartCoroutine(DelayKey(val => cont[4] = val, key));
+            key.SetActive(true);
+            key.GetComponent<BoxCollider2D>().enabled = true;
+            StartCoroutine(Delay(val => cont[4] = val));
         }
         if (cont[4] && playerInv.hasKey) {
             cont[4] = false;
@@ -118,11 +123,12 @@ public class LevelController : MonoBehaviour {
         callback2();
     }
 
-    private IEnumerator DelayKey(Action<bool> callback, GameObject key) {
+    //Temporarily gone for playtesting
+    /*private IEnumerator DelayKey(Action<bool> callback, GameObject key) {
         yield return new WaitForSeconds(2f);
         key.GetComponent<BoxCollider2D>().enabled = true;
         callback(true);
-    }
+    }*/
 
     private IEnumerator DelayElevator(GameObject elevator) {
         yield return new WaitForSeconds(3f);

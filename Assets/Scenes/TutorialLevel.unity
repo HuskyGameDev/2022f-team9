@@ -726,7 +726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &467582297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2804,7 +2804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1397608551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2937,7 +2937,10 @@ MonoBehaviour:
   levelControllerObj: {fileID: 1934385634}
   detector0: {fileID: 1518308788}
   detector1: {fileID: 614771107}
-  key: {fileID: 0}
+  key: {fileID: 1067594385}
+  buttonBack: {fileID: 690879288}
+  button: {fileID: 2080386668}
+  interaction: {fileID: 1770459758}
 --- !u!1 &1431745542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,8 +2999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is a test of the average text size in the dialogue box with ordinary
-    sentences that will fill up the entire box pretty much
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3880,7 +3882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name goes here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
