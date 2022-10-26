@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorController : MonoBehaviour {
-
+public class DoorController : GenericLevelLoader {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerInv playerInv)) {
             if (playerInv.hasKey == true) {
                 Debug.Log("You win!");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                LoadNextLevel();
             } else {
                 Debug.Log("Get the key first!");
             }

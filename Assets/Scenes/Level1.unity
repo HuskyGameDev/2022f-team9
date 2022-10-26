@@ -400,6 +400,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 245.4
       objectReference: {fileID: 0}
+    - target: {fileID: 3682931281605903960, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682931281792506985, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 468
+      objectReference: {fileID: 0}
     - target: {fileID: 3682931282260103770, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2087,6 +2095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1b3556672a67442a3e96549c20cec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!61 &1011234247
 BoxCollider2D:
   m_ObjectHideFlags: 0
