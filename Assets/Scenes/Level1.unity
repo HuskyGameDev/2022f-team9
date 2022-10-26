@@ -496,8 +496,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 3682931282260103771, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+--- !u!95 &150768620 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3682931280874672907, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+  m_PrefabInstance: {fileID: 150768619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &188559464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1b3556672a67442a3e96549c20cec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
+  transition: {fileID: 150768620}
   transitionTime: 1
 --- !u!61 &1011234247
 BoxCollider2D:

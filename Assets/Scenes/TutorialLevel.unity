@@ -2052,6 +2052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1b3556672a67442a3e96549c20cec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 3682931280202972294}
+  transitionTime: 1
 --- !u!61 &1011234247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4825,3 +4827,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+--- !u!95 &3682931280202972294 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3682931280874672907, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+  m_PrefabInstance: {fileID: 3682931280202972293}
+  m_PrefabAsset: {fileID: 0}

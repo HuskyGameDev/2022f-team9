@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : GenericLevelLoader
 {
    
     public void PlayGame()
@@ -15,15 +15,5 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("QUIT");
         Application.Quit();
-    }
-
-    public void LoadNextLevel()
-    {
-        LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void LoadLevel(int levelIndex)
-    {
-        SceneManager.LoadScene(levelIndex);
     }
 }
