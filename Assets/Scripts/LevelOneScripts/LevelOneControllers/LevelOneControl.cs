@@ -17,76 +17,63 @@ public class LevelOneControl : MonoBehaviour {
     [SerializeField] GameObject elevator;
     private PlayerInv playerInv;
 
-    //[Header("Detectors")]
-    //[SerializeField] GameObject detector0;
-    //[SerializeField] GameObject detector1;
-    //private DetectorController detector0Controller;
-    //private DetectorController detector1Controller;
     [Header("Bools")]
-    //public bool[] cont = { false, false, false, false, false, false };
     public bool[] buts = { false, false, false, false };
 
-
+//Level 1 Button order = Red Yellow Blue Green
     private void Start() {
-        RButtonController = RButton.GetComponent<ButtonController>();
+       
     }
 
     private void Update() {
-        //RButtonController.isPressed;
+
     }
 
-    /*
+    public void pressRed() {
+	buts[0] = true;
+    }
 
-    DIALOUGE CODE COMMENTED OUT UNTIL IT IS DETERMINED TO BE NEEDED OR NOT
+    public void pressYellow() {
 
-        private void Start() {
-            detector0Controller = detector0.GetComponent<DetectorController>();
-            detector1Controller = detector1.GetComponent<DetectorController>();
-            playerInv = player.GetComponent<PlayerInv>();
-        }
+	if(buts[0]) {
+	    buts[1] = true;
+	}
+	else {
+	    BroadcastMessage("reset");
+	}
+    }
 
+    public void pressBlue() {
 
+	if(buts[1]) {
+	    buts[2] = true;
+	}
+	else {
+	    BroadcastMessage("reset");
+	}
 
-        private void Update() {
+    }
 
+    public void pressGreen() {
 
-        }
+	if(buts[2]) {
+	    buts[3] = true;
+	}
+	else {
+	    BroadcastMessage("reset");
+	}
 
-        private IEnumerator NextSentenceDelay() {
-            yield return new WaitForSeconds(1f);
-            dM.DisplayNextSentence();
-            cButton.SetActive(true);
-        }
+    }
 
-        private IEnumerator Delay(Action<bool> callback) {
-            yield return new WaitForSeconds(3f);
-            callback(true);
-        }
+    public void reset() {
+	for(int i = 0; i < 4; i++)
+	{
+	    buts[i] = false;
+	}
 
-        private IEnumerator DelayLong(Action callback0, Action callback1, Action callback2) {
-            yield return new WaitForSeconds(5f);
-            callback0();
-            callback1();
-            callback2();
-        }
+    }
 
-        private IEnumerator DelayKey(Action<bool> callback, GameObject key) {
-            yield return new WaitForSeconds(2f);
-            key.GetComponent<BoxCollider2D>().enabled = true;
-            callback(true);
-        }
-
-        private IEnumerator DelayElevator(GameObject elevator) {
-            yield return new WaitForSeconds(3f);
-            elevator.GetComponent<BoxCollider2D>().enabled = true;
-            StartCoroutine(DelayLong(() => dM.DisplayNextSentence(), () => cButton.SetActive(false),
-                () => rButton.SetActive(false)));
-        }
-
-        private IEnumerator DelayDetector(Action<bool> callback, GameObject detectorX) {
-            yield return new WaitForSeconds(3f);
-            callback(true);
-            detectorX.SetActive(true);
-        }
-    */
+    public void guide() {
+	BroadcastMessage("toggle");	    
+    }
 }
