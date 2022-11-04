@@ -11,6 +11,9 @@ public class PlayerInv : MonoBehaviour {
     public KeyCode interactKey;
     public UnityEvent interactAction;
 
+    private bool hasObj = false;
+    private GameObject current;
+
     void Update() {
         if (isInRange) {
             if (Input.GetKeyDown(interactKey)) {
@@ -24,10 +27,20 @@ public class PlayerInv : MonoBehaviour {
     }
 
     private void gravGunUpdate() {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        Debug.Log(worldMousePos);
         if (Input.GetMouseButtonDown(0)) {
-            GameObject current;
-            TryGetObjAtMousePos(Input.mousePosition, out current);
-            Debug.Log(current);
+            if (TryGetObjAtMousePos(mousePos, out current)) {
+                Debug.Log(current);
+                hasObj = true;
+            } else {
+                Debug.Log("no object");
+            }
+        }
+        if (hasObj) {
+            //Debug.Log(current);
+            current.transform.position = new Vector3(worldMousePos.x, worldMousePos.y, 0);
         }
     }
 

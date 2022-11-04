@@ -1554,6 +1554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   isInRange: 0
+  hasGravGun: 0
   interactKey: 0
   interactAction:
     m_PersistentCalls:
@@ -1921,6 +1922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   isInRange: 0
+  hasGravGun: 0
   interactKey: 102
   interactAction:
     m_PersistentCalls:
@@ -4008,6 +4010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   isInRange: 0
+  hasGravGun: 0
   interactKey: 102
   interactAction:
     m_PersistentCalls:
@@ -4734,6 +4737,10 @@ PrefabInstance:
     - target: {fileID: 3682931280874672908, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682931280874672908, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3682931281605903961, guid: c8f33392404fe2f41b25f369efc3a640, type: 3}
       propertyPath: m_Layer
