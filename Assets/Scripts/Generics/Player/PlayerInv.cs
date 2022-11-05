@@ -10,9 +10,14 @@ public class PlayerInv : MonoBehaviour {
     public bool hasGravGun;
     public KeyCode interactKey;
     public UnityEvent interactAction;
+    private GravGunController gravGunController;
 
-    private bool hasObj = false;
-    private GameObject current;
+    /*private bool hasObj = false;
+    private GameObject current;*/
+
+    private void Start() {
+        gravGunController = gameObject.GetComponent<GravGunController>();
+    }
 
     void Update() {
         if (isInRange) {
@@ -22,37 +27,7 @@ public class PlayerInv : MonoBehaviour {
         }
 
         if (hasGravGun) {
-            gravGunUpdate();
-        }
-    }
-
-    private void gravGunUpdate() {
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        Debug.Log(worldMousePos);
-        if (Input.GetMouseButtonDown(0)) {
-            if (TryGetObjAtMousePos(mousePos, out current)) {
-                Debug.Log(current);
-                hasObj = true;
-            } else {
-                Debug.Log("no object");
-            }
-        }
-        if (hasObj) {
-            //Debug.Log(current);
-            current.transform.position = new Vector3(worldMousePos.x, worldMousePos.y, 0);
-        }
-    }
-
-    private bool TryGetObjAtMousePos(Vector3 mousePos, out GameObject go) {
-        Ray ray = Camera.main.ScreenPointToRay(mousePos);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider) {
-            go = hit.collider.gameObject;
-            return true;
-        } else {
-            go = null;
-            return false;
+            gravGunController.gravGunUpdate();
         }
     }
 
