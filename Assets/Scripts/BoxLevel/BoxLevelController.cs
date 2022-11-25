@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxLevelController : MonoBehaviour
 {
-    public float jumpForce = 10f;
+    public float jumpForce = 13f;
     //code for spring bouncing
     private void OnTriggerEnter2D(Collider2D collision)
     {
