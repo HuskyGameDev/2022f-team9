@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class BoxLevelController : MonoBehaviour
 {
+    public float jumpForce = 10f;
     //code for spring bouncing
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Spring engaged");
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Debug.Log("Jumped off spring");
-            }
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 }
