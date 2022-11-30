@@ -60,6 +60,7 @@ public class LevelOneControl : MonoBehaviour {
 	if(buts[2]) {
 	    buts[3] = true;
         key.SetActive(true);
+        key.GetComponent<BoxCollider2D>().enabled = true;
 	}
 	else {
 	    Invoke("wrong", 0.05f);
