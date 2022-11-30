@@ -12,7 +12,8 @@ public class LevelOneControl : MonoBehaviour {
     [SerializeField] GameObject YButton;
     private ButtonController RButtonController;
 
-    [Header("Player, and Elevator")]
+    [Header("Key, Player, and Elevator")]
+    [SerializeField] GameObject key;
     [SerializeField] GameObject player;
     [SerializeField] GameObject elevator;
     private PlayerInv playerInv;
@@ -58,6 +59,7 @@ public class LevelOneControl : MonoBehaviour {
 
 	if(buts[2]) {
 	    buts[3] = true;
+        key.SetActive(true);
 	}
 	else {
 	    Invoke("wrong", 0.05f);
