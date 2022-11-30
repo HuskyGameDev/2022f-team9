@@ -39,7 +39,7 @@ public class LevelOneControl : MonoBehaviour {
 	    buts[1] = true;
 	}
 	else {
-	    BroadcastMessage("reset");
+	    Invoke("wrong", 0.05f);
 	}
     }
 
@@ -49,7 +49,7 @@ public class LevelOneControl : MonoBehaviour {
 	    buts[2] = true;
 	}
 	else {
-	    BroadcastMessage("reset");
+	    Invoke("wrong", 0.05f);
 	}
 
     }
@@ -60,17 +60,17 @@ public class LevelOneControl : MonoBehaviour {
 	    buts[3] = true;
 	}
 	else {
-	    BroadcastMessage("reset");
+	    Invoke("wrong", 0.05f);
 	}
 
     }
 
-    public void reset() {
+    void wrong() {
 	for(int i = 0; i < 4; i++)
 	{
 	    buts[i] = false;
 	}
-
+	BroadcastMessage("reset");
     }
 
     public void guide() {
