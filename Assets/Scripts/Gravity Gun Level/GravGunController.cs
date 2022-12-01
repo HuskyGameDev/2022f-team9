@@ -5,30 +5,53 @@ using UnityEngine;
 public class GravGunController : MonoBehaviour {
 
     private GameObject current;
+    [SerializeField] GameObject player;
+    private Rigidbody2D currentBody;
+
+    public int gravGunMaxSpeed;
+    public float minSpeedDist;
+    public float maxSpeedDist;
+    public float speedPercent;
+    public float speedNow;
+
+
+    public int gravGunRadius;
+    private float distToObj;
     private bool hasObj = false;
 
     public void gravGunUpdate() {
         Vector3 mousePos = Input.mousePosition;
-        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 temp = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 worldMousePos = new Vector3(temp.x, temp.y, temp.z + 10);
 
-        if (Input.GetMouseButtonDown(0)) {
+        //Debug.Log(Vector3.Distance(player.transform.position, worldMousePos));
+
+        if (Input.GetMouseButtonDown(0) && Vector3.Distance(player.transform.position, worldMousePos) < gravGunRadius) {
             if (!hasObj) {
                 if (TryGetObjAtMousePos(mousePos, out current)) {
                     Debug.Log(current);
-                    current.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
                     hasObj = true;
                 } else {
                     Debug.Log("no object");
                 }
             } else {
-                current.GetComponent<Rigidbody2D>().gravityScale = 3.5f;
                 current = null; //drop current, hopefully
                 hasObj = false;
             }
         }
 
         if (hasObj) {
-            current.transform.position = new Vector3(worldMousePos.x, worldMousePos.y, 0);
+            distToObj = Vector3.Distance(current.transform.position, worldMousePos);
+            Debug.Log(distToObj);
+            if (Vector3.Distance(current.transform.position, player.transform.position) < gravGunRadius) {
+                speedPercent = Mathf.InverseLerp(minSpeedDist, maxSpeedDist, distToObj);
+                speedNow = Mathf.Lerp(0, gravGunMaxSpeed, speedPercent);
+                currentBody.velocity = ((worldMousePos - current.transform.position).normalized * speedNow);
+            } else {
+                current = null;
+                currentBody = null;
+                hasObj = false;
+            }
         }
     }
 
@@ -37,6 +60,7 @@ public class GravGunController : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
         if (hit.collider && hit.collider.gameObject.CompareTag("Movable")) {
             go = hit.collider.gameObject;
+            currentBody = hit.collider.gameObject.GetComponent<Rigidbody2D>();
             return true;
         } else {
             go = null;

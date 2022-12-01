@@ -823,7 +823,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!212 &482652924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!212 &801126578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1429,6 +1429,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dcc6cb6e64dd14498b3c2e81cb21cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 868005603}
+  gravGunMaxSpeed: 20
+  minSpeedDist: 0.1
+  maxSpeedDist: 1
+  speedPercent: 0
+  speedNow: 0
+  gravGunRadius: 8
 --- !u!1 &878079888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,7 +2047,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!212 &1410317603
 SpriteRenderer:
   m_ObjectHideFlags: 0
