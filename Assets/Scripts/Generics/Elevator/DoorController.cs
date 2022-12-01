@@ -8,6 +8,7 @@ public class DoorController : GenericLevelLoader {
         if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerInv playerInv)) {
             if (playerInv.hasKey == true) {
                 Debug.Log("You win!");
+                playerInv.hasKey = false;
                 LoadNextLevel();
             } else {
                 Debug.Log("Get the key first!");
