@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   isInRange: 0
+  hasGravGun: 0
   interactKey: 102
   interactAction:
     m_PersistentCalls:
@@ -2786,7 +2787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 453433242}
-  stopping: 1
+  big: 0
 --- !u!1 &467582296
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,7 +3511,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &558999711
@@ -4086,7 +4087,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &693397500
@@ -4989,6 +4990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 1
   isInRange: 0
+  hasGravGun: 0
   interactKey: 0
   interactAction:
     m_PersistentCalls:
@@ -5754,6 +5756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   isInRange: 0
+  hasGravGun: 0
   interactKey: 102
   interactAction:
     m_PersistentCalls:
@@ -6831,7 +6834,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1308019483
@@ -6921,7 +6924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 1322376600}
-  stopping: 1
+  big: 0
 --- !u!61 &1322376603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7031,7 +7034,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1329864331
@@ -7199,7 +7202,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1359130859
@@ -7615,6 +7618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   isInRange: 0
+  hasGravGun: 0
   interactKey: 102
   interactAction:
     m_PersistentCalls:
@@ -8333,7 +8337,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1506426908
@@ -8875,7 +8879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 1601724455}
-  stopping: 1
+  big: 0
 --- !u!61 &1601724458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11314,7 +11318,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1857616598
@@ -11527,7 +11531,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1905833423
@@ -12467,6 +12471,6 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
