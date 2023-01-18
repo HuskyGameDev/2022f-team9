@@ -11,6 +11,7 @@ public class BoxLevelController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Spring engaged");
+            Mathf.Clamp(jumpForce, 13f, 13f); 
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }

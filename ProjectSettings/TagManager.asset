@@ -8,6 +8,8 @@ TagManager:
   - Fish
   - Movable
   - Platform
+  - Box
+  - Spring
   layers:
   - Default
   - TransparentFX
