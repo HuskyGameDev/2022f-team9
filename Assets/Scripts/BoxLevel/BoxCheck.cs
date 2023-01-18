@@ -41,39 +41,27 @@ public class BoxCheck : MonoBehaviour
             two.SetActive(false);
             one.SetActive(false);
         }
-    }
-    /*
-    List<Collider> collidedObjects = new List<Collider>();
-
-    private void OnCollisionEnter(Collision col)
-    {
-        if (!collidedObjects.Contains(col.collider) && col.collider.tag == "Player")
+        else if (collisionCounter == 2)
         {
-            collidedObjects.Add(col.collider);
+            four.SetActive(false);
+            three.SetActive(false);
+            two.SetActive(true);
+            one.SetActive(false);
         }
-    }
-    void OnCollisionStay(Collision col)
-    {
-        OnCollisionEnter(col); 
-    }
-    void Update()
-    {
-        var numberOfColliders = collidedObjects.Count;
-        if (numberOfColliders == 0)
+        else if (collisionCounter == 3)
         {
-            four.SetActive(true);
+            four.SetActive(false);
+            three.SetActive(false);
+            two.SetActive(false);
+            one.SetActive(true);
+        }
+        else if (collisionCounter == 4)
+        {
+            four.SetActive(false);
             three.SetActive(false);
             two.SetActive(false);
             one.SetActive(false);
         }
-        else if (numberOfColliders == 1)
-        {
-            four.SetActive(false);
-            three.SetActive(true);
-            two.SetActive(false);
-            one.SetActive(false);
-        }
-        collidedObjects.Clear(); 
-    }*/
+    }
 
 }
