@@ -8,7 +8,9 @@ public class BoxCheck : MonoBehaviour
     [SerializeField] GameObject three;
     [SerializeField] GameObject two;
     [SerializeField] GameObject one;
-    
+    [SerializeField] GameObject key;
+    [SerializeField] GameObject platform;
+
     public int collisionCounter;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -61,6 +63,8 @@ public class BoxCheck : MonoBehaviour
             three.SetActive(false);
             two.SetActive(false);
             one.SetActive(false);
+            key.SetActive(true);
+            platform.SetActive(true);
         }
     }
 
