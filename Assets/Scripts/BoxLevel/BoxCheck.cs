@@ -12,6 +12,7 @@ public class BoxCheck : MonoBehaviour
     [SerializeField] GameObject platform;
 
     public int collisionCounter;
+    public bool keySpawned = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +26,15 @@ public class BoxCheck : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
         {
             collisionCounter--;
+        }
+    }
+    private void spawnKey(bool keySpawned)
+    {
+        if (keySpawned == false)
+        {
+            key.SetActive(true);
+            platform.SetActive(true);
+            keySpawned = false;
         }
     }
     private void Update()
@@ -63,8 +73,7 @@ public class BoxCheck : MonoBehaviour
             three.SetActive(false);
             two.SetActive(false);
             one.SetActive(false);
-            key.SetActive(true);
-            platform.SetActive(true);
+            spawnKey(keySpawned);
         }
     }
 
