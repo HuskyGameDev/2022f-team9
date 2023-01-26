@@ -28,13 +28,13 @@ public class BoxCheck : MonoBehaviour
             collisionCounter--;
         }
     }
-    private void spawnKey(bool keySpawned)
+    private void spawnKey()
     {
         if (keySpawned == false)
         {
             key.SetActive(true);
             platform.SetActive(true);
-            keySpawned = false;
+            keySpawned = true;
         }
     }
     private void Update()
@@ -73,7 +73,7 @@ public class BoxCheck : MonoBehaviour
             three.SetActive(false);
             two.SetActive(false);
             one.SetActive(false);
-            spawnKey(keySpawned);
+            spawnKey();
         }
     }
 
