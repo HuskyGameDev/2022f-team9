@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85262099af87f0145a1185258b2bab8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 868005603}
   jumpForce: 27
 --- !u!1 &120268685
 GameObject:
@@ -2211,6 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85262099af87f0145a1185258b2bab8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 868005603}
   jumpForce: 27
 --- !u!61 &725545176
 BoxCollider2D:
@@ -2444,6 +2446,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1526921046}
   m_CeilingCheck: {fileID: 779724714}
   m_CrouchDisableCollider: {fileID: 868005608}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
