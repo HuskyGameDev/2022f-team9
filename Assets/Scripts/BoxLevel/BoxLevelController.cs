@@ -9,7 +9,7 @@ public class BoxLevelController : MonoBehaviour
     //code for spring bouncing
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && player.GetComponent<PlayerController>().m_Grounded)
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Spring engaged");
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
