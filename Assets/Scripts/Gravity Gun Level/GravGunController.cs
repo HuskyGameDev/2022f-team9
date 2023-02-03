@@ -7,6 +7,7 @@ public class GravGunController : MonoBehaviour {
     private GameObject current;
     [SerializeField] GameObject player;
     private Rigidbody2D currentBody;
+    [SerializeField] OutlineController outlineController;
 
     public int gravGunMaxSpeed;
     public float minSpeedDist;
@@ -15,9 +16,9 @@ public class GravGunController : MonoBehaviour {
     public float speedNow;
 
 
-    public int gravGunRadius;
-    private float distToObj;
-    private bool hasObj = false;
+    public double gravGunRadius;
+    public float distToObj;
+    public bool hasObj = false;
 
     public void gravGunUpdate() {
         Vector3 mousePos = Input.mousePosition;
@@ -29,20 +30,20 @@ public class GravGunController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && Vector3.Distance(player.transform.position, worldMousePos) < gravGunRadius) {
             if (!hasObj) {
                 if (TryGetObjAtMousePos(mousePos, out current)) {
-                    Debug.Log(current);
-                    hasObj = true;
+                    //Debug.Log(current);
+                    objState(true);
                 } else {
                     Debug.Log("no object");
                 }
             } else {
                 current = null; //drop current, hopefully
-                hasObj = false;
+                objState(false);
             }
         }
 
         if (hasObj) {
             distToObj = Vector3.Distance(current.transform.position, worldMousePos);
-            Debug.Log(distToObj);
+            //Debug.Log(distToObj);
             if (Vector3.Distance(current.transform.position, player.transform.position) < gravGunRadius) {
                 speedPercent = Mathf.InverseLerp(minSpeedDist, maxSpeedDist, distToObj);
                 speedNow = Mathf.Lerp(0, gravGunMaxSpeed, speedPercent);
@@ -50,8 +51,18 @@ public class GravGunController : MonoBehaviour {
             } else {
                 current = null;
                 currentBody = null;
-                hasObj = false;
+                objState(false);
             }
+        }
+    }
+
+    private void objState(bool arg) {
+        if (arg) {
+            hasObj = true;
+            outlineController.changeOutline(2);
+        } else {
+            hasObj = false;
+            outlineController.changeOutline(1);
         }
     }
 
