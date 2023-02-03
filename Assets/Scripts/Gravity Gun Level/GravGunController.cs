@@ -22,12 +22,12 @@ public class GravGunController : MonoBehaviour {
 
     public void gravGunUpdate() {
         Vector3 mousePos = Input.mousePosition;
-        Vector3 temp = Camera.main.ScreenToWorldPoint(mousePos);
-        Vector3 worldMousePos = new Vector3(temp.x, temp.y, temp.z + 10);
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 worldMousePosAdj = new Vector3(worldMousePos.x, worldMousePos.y, worldMousePos.z + 10);
 
         //Debug.Log(Vector3.Distance(player.transform.position, worldMousePos));
 
-        if (Input.GetMouseButtonDown(0) && Vector3.Distance(player.transform.position, worldMousePos) < gravGunRadius) {
+        if (Input.GetMouseButtonDown(0) && Vector3.Distance(player.transform.position, worldMousePosAdj) < gravGunRadius) {
             if (!hasObj) {
                 if (TryGetObjAtMousePos(mousePos, out current)) {
                     //Debug.Log(current);
@@ -42,12 +42,13 @@ public class GravGunController : MonoBehaviour {
         }
 
         if (hasObj) {
-            distToObj = Vector3.Distance(current.transform.position, worldMousePos);
+            distToObj = Vector3.Distance(current.transform.position, worldMousePosAdj);
             //Debug.Log(distToObj);
-            if (Vector3.Distance(current.transform.position, player.transform.position) < gravGunRadius) {
+            if (Vector3.Distance(current.transform.position, player.transform.position) < gravGunRadius
+                    && Vector3.Distance(worldMousePosAdj, player.transform.position) < gravGunRadius) {
                 speedPercent = Mathf.InverseLerp(minSpeedDist, maxSpeedDist, distToObj);
                 speedNow = Mathf.Lerp(0, gravGunMaxSpeed, speedPercent);
-                currentBody.velocity = ((worldMousePos - current.transform.position).normalized * speedNow);
+                currentBody.velocity = ((worldMousePosAdj - current.transform.position).normalized * speedNow);
             } else {
                 current = null;
                 currentBody = null;
@@ -60,9 +61,11 @@ public class GravGunController : MonoBehaviour {
         if (arg) {
             hasObj = true;
             outlineController.changeOutline(2);
+            //currentBody.mass = 0;
         } else {
             hasObj = false;
             outlineController.changeOutline(1);
+            //currentBody.mass = 1;
         }
     }
 
