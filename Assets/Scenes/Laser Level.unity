@@ -762,7 +762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 352306128}
   - component: {fileID: 352306129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flashing Platforms1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 384864211}
   - component: {fileID: 384864212}
   - component: {fileID: 384864213}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1625,7 +1625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 727718498}
   - component: {fileID: 727718499}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2259,7 +2259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066746089}
   - component: {fileID: 1066746090}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2427,7 +2427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085800135}
   - component: {fileID: 1085800136}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3347,6 +3347,7 @@ GameObject:
   - component: {fileID: 1500441291}
   - component: {fileID: 1500441292}
   - component: {fileID: 1500441293}
+  - component: {fileID: 1500441294}
   m_Layer: 5
   m_Name: Platform
   m_TagString: Untagged
@@ -3447,6 +3448,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.09}
   m_EdgeRadius: 0
+--- !u!114 &1500441294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500441290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de3c4905affbaa49899a5cd7d4831d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position1: {fileID: 947676648}
+  position2: {fileID: 1816521478}
+  speed: 5
+  startPos: {fileID: 947676648}
 --- !u!1 &1506815856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,7 +3622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562399358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.18, y: 1.66, z: 0}
+  m_LocalPosition: {x: -4.64, y: 1.66, z: 0}
   m_LocalScale: {x: 1.6875, y: 19.026562, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3636,7 +3653,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1562399361
 MonoBehaviour:
@@ -4128,7 +4145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748734242}
   - component: {fileID: 1748734243}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4212,7 +4229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749392909}
   - component: {fileID: 1749392910}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4463,7 +4480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780481576}
   - component: {fileID: 1780481577}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4659,7 +4676,7 @@ GameObject:
   - component: {fileID: 1792549588}
   - component: {fileID: 1792549590}
   - component: {fileID: 1792549589}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Platform (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5029,7 +5046,7 @@ GameObject:
   - component: {fileID: 1867775145}
   - component: {fileID: 1867775146}
   - component: {fileID: 1867775147}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5348,7 +5365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020917985}
   - component: {fileID: 2020917986}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5433,7 +5450,7 @@ GameObject:
   - component: {fileID: 2045508350}
   - component: {fileID: 2045508352}
   - component: {fileID: 2045508351}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5545,7 +5562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135633374}
   - component: {fileID: 2135633375}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

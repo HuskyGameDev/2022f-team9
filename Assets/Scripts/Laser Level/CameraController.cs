@@ -15,11 +15,13 @@ public class CameraController : MonoBehaviour
 
     public void MoveToNewRoom()
     {
-        currentPosX = 33.9f;
+        currentPosX = 32.88f;
+        Camera.main.orthographicSize = 9.877234f;
     }
 
     public void MoveToPrevRoom()
     {
         currentPosX = 0.0f;
+        Camera.main.orthographicSize = 9.1f;
     }
 }
