@@ -14,11 +14,11 @@ public class RoomDoor : MonoBehaviour
         {
             if (collision.transform.position.x < transform.position.x)
             {
-                cam.MoveToNewRoom(nextRoom);
+                cam.MoveToNewRoom();
             }
             else
             {
-                cam.MoveToNewRoom(previousRoom);
+                cam.MoveToPrevRoom();
             }
         }
     }
