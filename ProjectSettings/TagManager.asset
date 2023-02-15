@@ -12,6 +12,7 @@ TagManager:
   - Spring
   - Wall
   - Ground
+  - Laser
   layers:
   - Default
   - TransparentFX
