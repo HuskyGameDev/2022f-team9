@@ -10,6 +10,7 @@ public class LaserMovement : MonoBehaviour
 
     [SerializeField]  ButtonController buttonController;
     [SerializeField] GameObject button;
+    [SerializeField] GameObject laser;
 
     Vector3 nextPos;
 
