@@ -6,7 +6,6 @@ public class WeightMeasurment : MonoBehaviour
 {
 
     int totalWeight;
-    [SerializeField] private GameObject[] boxes;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,7 @@ public class WeightMeasurment : MonoBehaviour
 
         int tempWeight = 0;
 
-
+        //NEEDS TO BE FINISHED
 
         if(tempWeight != totalWeight)
         {
