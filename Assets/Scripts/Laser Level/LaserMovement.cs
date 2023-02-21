@@ -8,15 +8,21 @@ public class LaserMovement : MonoBehaviour
     public float speed;
     public Transform startPos;
 
-    [SerializeField] ButtonController buttonController;
+    [SerializeField]  ButtonController buttonController;
+    [SerializeField] GameObject button;
 
     Vector3 nextPos;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Find the GameObject with the ButtonController script and get a reference to it
+        GameObject buttonControllerObject = GameObject.Find("GenericButton");
+        buttonController = buttonControllerObject.GetComponent<ButtonController>();
+
         nextPos = startPos.position;
     }
+
 
     // Update is called once per frame
     void Update()
