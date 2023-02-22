@@ -8,9 +8,9 @@ public class LaserMovement : MonoBehaviour
     public float speed;
     public Transform startPos;
 
-    [SerializeField]  ButtonController buttonController;
     [SerializeField] GameObject button;
     [SerializeField] GameObject laser;
+    public SwitchController switchController;
 
     Vector3 nextPos;
 
@@ -18,8 +18,8 @@ public class LaserMovement : MonoBehaviour
     void Start()
     {
         // Find the GameObject with the ButtonController script and get a reference to it
-        GameObject buttonControllerObject = GameObject.Find("GenericButton");
-        buttonController = buttonControllerObject.GetComponent<ButtonController>();
+        GameObject buttonControllerObject = GameObject.Find("Button");
+        switchController = buttonControllerObject.GetComponent<SwitchController>();
 
         nextPos = startPos.position;
     }
@@ -28,7 +28,7 @@ public class LaserMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!buttonController.isPressed)
+        if (!switchController.isSwitched)
         {
             if (transform.position == position1.position)
             {
