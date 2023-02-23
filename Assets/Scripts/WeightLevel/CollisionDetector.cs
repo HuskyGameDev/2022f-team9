@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class CollisionDetector : MonoBehaviour
 {
-    //will have enter and exit collision methods that change status
-    //also have get method for that status, most likely just bool of if box is colliding or not
-    //these will be used as objects in array for platform and will be used to calculate total weight
-
+    //true if the box is on the platform
     public bool boxCollision;
 
     // Start is called before the first frame update
@@ -18,9 +15,31 @@ public class CollisionDetector : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
+        if (collision.gameObject.CompareTag("Box"))
+        {
+            boxCollision = true;
+        }
+
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Box"))
+        {
+            boxCollision = false;
+        }
+
+    }
+
+    public bool getIfColl()
+    {
+
+        return boxCollision;
+
     }
 }

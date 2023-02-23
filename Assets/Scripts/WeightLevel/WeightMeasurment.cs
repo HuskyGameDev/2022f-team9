@@ -5,8 +5,9 @@ using UnityEngine;
 public class WeightMeasurment : MonoBehaviour
 {
 
+    [SerializeField] private GameObject[] colliders;
     int totalWeight;
-
+    //6,2,13,7
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,22 @@ public class WeightMeasurment : MonoBehaviour
         int tempWeight = 0;
 
         //NEEDS TO BE FINISHED
+        //if (colliders[0].getIfColl())
+        {
+            tempWeight = tempWeight + 6;
+        }
+       // if (colliders[1].getIfColl())
+        {
+            tempWeight = tempWeight + 2;
+        }
+        //if (colliders[2].getIfColl())
+        {
+            tempWeight = tempWeight + 13;
+        }
+       // if (colliders[3].getIfColl())
+        {
+            tempWeight = tempWeight + 7;
+        }
 
         if(tempWeight != totalWeight)
         {
