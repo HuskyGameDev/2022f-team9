@@ -19,8 +19,8 @@ public class TileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, targetPosition,0.05f);
-        if(targetPosition == correctPosition)
+        transform.position = Vector3.Lerp(transform.position, targetPosition, 0.05f);
+        if (targetPosition == correctPosition)
         {
             _sprite.color = Color.green;
             inRightPlace = true;
