@@ -18,34 +18,15 @@ public class SwitchController : MonoBehaviour
             Debug.Log("Button was pressed");
             gameObject.GetComponent<SpriteRenderer>().sprite = OnSprite;
         }
-        if (isSwitched)
+        
+        else if (isSwitched)
         {
             isSwitched = false;
             Debug.Log("Button was pressed again");
             gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
         }
     }
-    /**
-    void Start()
-    {
-        // Find the GameObject with the ButtonController script and get a reference to it
-        GameObject playerControllerObject = GameObject.Find("Player");
-        playerInv = playerControllerObject.GetComponent<PlayerInv>();
-        Debug.Log("Found Player Inv");
-    }
-
-        private void Update()
-    {
-        if (playerInv.isInRange)
-        {
-            Debug.Log("In Range");
-            if (Input.GetKeyDown(interactKey))
-            {
-                PressButton();
-                Debug.Log("Button Pressed");
-            }
-        }
-    }**/
+    
         private void reset()
         {
             isSwitched = false;
