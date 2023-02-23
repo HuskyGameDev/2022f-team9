@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PuzzleScript : MonoBehaviour
 {
-
+    private PlayerMovement playerMovement;
     [SerializeField] private Transform emptySpace = null;
     private int emptySpaceIndex = 15;
     private Camera _camera;
-    [SerializeField] private TileScript[] tiles;
+    [SerializeField] public TileScript[] tiles;
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
     // Start is called before the first frame update
@@ -15,38 +15,7 @@ public class PuzzleScript : MonoBehaviour
         _camera = Camera.main;
         endPanel.SetActive(false);
         Shuffle();
-
-        foreach (var tile in tiles)
-        {
-            var spriteRenderer = tile.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sortingLayerName = "Foreground";
-                spriteRenderer.sortingOrder = 1;
-            }
-
-            var numObj = tile.transform.Find("Number/Numbers_1");
-            if (numObj != null)
-            {
-                var numSR = numObj.GetComponent<SpriteRenderer>();
-                if (numSR != null)
-                {
-                    numSR.sortingLayerName = "Foreground";
-                    numSR.sortingOrder = 1;
-                }
-            }
-
-            var numObj2 = tile.transform.Find("Number/Numbers_2");
-            if (numObj2 != null)
-            {
-                var numSR2 = numObj2.GetComponent<SpriteRenderer>();
-                if (numSR2 != null)
-                {
-                    numSR2.sortingLayerName = "Foreground";
-                    numSR2.sortingOrder = 1;
-                }
-            }
-        }
+        ShowBoard(true);
     }
 
 
@@ -96,6 +65,12 @@ public class PuzzleScript : MonoBehaviour
                 endPanel.SetActive(true);
             }
         }
+
+        if (_isFinished)
+        {
+           ShowBoard(false);
+            playerMovement.runSpeed = 50;
+        } 
     }
 
     public void Shuffle()
@@ -125,7 +100,7 @@ public class PuzzleScript : MonoBehaviour
 
             }
             inversion = GetInversions();
-            Debug.Log("Puzzle shuffled");
+            //Debug.Log("Puzzle shuffled");
         } while (inversion % 2 != 0);
 
     }
@@ -167,4 +142,90 @@ public class PuzzleScript : MonoBehaviour
         }
         return inversionsSum;
     }
+
+    public void ShowBoard(bool show)
+    {
+       
+        if (show)
+        {
+            foreach (var tile in tiles)
+            {
+                if (tile == null)
+                {
+                    continue;
+                }
+                var spriteRenderer = tile.GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.sortingLayerName = "Foreground";
+                    spriteRenderer.sortingOrder = 1;
+                }
+
+                var numObj = tile.transform.Find("Number/Numbers_1");
+                if (numObj != null)
+                {
+                    var numSR = numObj.GetComponent<SpriteRenderer>();
+                    if (numSR != null)
+                    {
+                        numSR.sortingLayerName = "Foreground";
+                        numSR.sortingOrder = 1;
+                    }
+                }
+
+                var numObj2 = tile.transform.Find("Number/Numbers_2");
+                if (numObj2 != null)
+                {
+                    var numSR2 = numObj2.GetComponent<SpriteRenderer>();
+                    if (numSR2 != null)
+                    {
+                        numSR2.sortingLayerName = "Foreground";
+                        numSR2.sortingOrder = 1;
+                    }
+                }
+            }
+        }
+        else if (show == false)
+        {
+            foreach (var tile in tiles)
+            {
+                
+                if (tile == null)
+                {
+                    continue;
+                }
+                var spriteRenderer = tile.GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.sortingLayerName = "Background4";
+                    spriteRenderer.sortingOrder = -1;
+                }
+
+                var numObj = tile.transform.Find("Number/Numbers_1");
+                if (numObj != null)
+                {
+                    var numSR = numObj.GetComponent<SpriteRenderer>();
+                    if (numSR != null)
+                    {
+                        numSR.sortingLayerName = "Background4";
+                        numSR.sortingOrder = -1;
+                    }
+                }
+
+                var numObj2 = tile.transform.Find("Number/Numbers_2");
+                if (numObj2 != null)
+                {
+                    var numSR2 = numObj2.GetComponent<SpriteRenderer>();
+                    if (numSR2 != null)
+                    {
+                        numSR2.sortingLayerName = "Background4";
+                        numSR2.sortingOrder = -1;
+                    }
+                } 
+            }
+        }
+        
+
+    }
+
+   
 }
