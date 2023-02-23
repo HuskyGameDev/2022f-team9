@@ -3,18 +3,22 @@ using UnityEngine;
 public class PuzzleScript : MonoBehaviour
 {
 
-    [SerializeField] private Transform emptySpace;
+    [SerializeField] private Transform emptySpace = null;
     private int emptySpaceIndex = 15;
     private Camera _camera;
     [SerializeField] private TileScript[] tiles;
-
     private bool _isFinished;
+    [SerializeField] private GameObject endPanel;
     // Start is called before the first frame update
     void Start()
     {
         _camera = Camera.main;
-       // Shuffle();
+        endPanel.SetActive(false);
+        Shuffle();
+
     }
+
+  
 
     // Update is called once per frame
     void Update()
@@ -57,7 +61,8 @@ public class PuzzleScript : MonoBehaviour
             if (correctTiles == tiles.Length - 1)
             {
                 _isFinished = true;
-                Debug.Log("You won");
+                Debug.Log(correctTiles);
+                endPanel.SetActive(true);
             }
         }
     }

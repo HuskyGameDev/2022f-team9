@@ -4772,7 +4772,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 22.69262
+  orthographic size: 22.516447
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4833,6 +4833,7 @@ MonoBehaviour:
   - {fileID: 795023039}
   - {fileID: 1479256090}
   - {fileID: 0}
+  endPanel: {fileID: 914413194}
 --- !u!1 &1640373772
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1740523202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6648,7 +6649,7 @@ RectTransform:
   m_GameObject: {fileID: 2100235964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1756550438}
