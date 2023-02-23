@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GravGunLevelController : MonoBehaviour {
 
-    [SerializeField] GameObject player;
-    private GravGunController gravGunController;
+    //[SerializeField] GameObject player;
+    //private GravGunController gravGunController;
     
     [Header("Buttons and Button Controllers")]
     [SerializeField] GameObject resetBoxes;
@@ -23,7 +23,7 @@ public class GravGunLevelController : MonoBehaviour {
 
 
     private void Start() {
-        gravGunController = player.GetComponent<GravGunController>();
+        //gravGunController = player.GetComponent<GravGunController>();
         resetBoxesController = resetBoxes.GetComponent<GenericButtonController>();
         box0DefaultPos = box0.transform.position;
         box1DefaultPos = box1.transform.position;

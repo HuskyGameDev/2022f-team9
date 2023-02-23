@@ -23,7 +23,7 @@ public class GravGunController : MonoBehaviour {
     public void gravGunUpdate() {
         Vector3 mousePos = Input.mousePosition;
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        Vector3 worldMousePosAdj = new Vector3(worldMousePos.x, worldMousePos.y, worldMousePos.z + 10);
+        Vector3 worldMousePosAdj = new(worldMousePos.x, worldMousePos.y, worldMousePos.z + 10);
 
         //Debug.Log(Vector3.Distance(player.transform.position, worldMousePos));
 
