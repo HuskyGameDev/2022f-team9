@@ -3640,6 +3640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallToScale: {fileID: 973648859}
   playerMovement: {fileID: 0}
+  pS: {fileID: 0}
 --- !u!61 &1246997892
 BoxCollider2D:
   m_ObjectHideFlags: 0

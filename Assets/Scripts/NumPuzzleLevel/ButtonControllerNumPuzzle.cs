@@ -9,10 +9,11 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
     private bool isPlayerNearby = false;
 
     public PlayerMovement playerMovement;
-
+    public PuzzleScript pS;
     private void Start()
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
+        pS = GetComponent<PuzzleScript>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -36,7 +37,10 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
         {
             playerMovement.runSpeed = 0;
             Debug.Log("button pressed");
-           
+            if (pS != null)
+            {
+                pS.ShowBoard(true);
+            }
             wallToScale.SetActive(false);
             
         }

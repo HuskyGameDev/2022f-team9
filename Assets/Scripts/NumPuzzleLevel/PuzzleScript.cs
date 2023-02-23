@@ -15,7 +15,7 @@ public class PuzzleScript : MonoBehaviour
         _camera = Camera.main;
         endPanel.SetActive(false);
         Shuffle();
-        ShowBoard(true);
+        //ShowBoard(true);
     }
 
 
@@ -69,7 +69,7 @@ public class PuzzleScript : MonoBehaviour
         if (_isFinished)
         {
            ShowBoard(false);
-            playerMovement.runSpeed = 50;
+           //playerMovement.runSpeed = 50;
         } 
     }
 
