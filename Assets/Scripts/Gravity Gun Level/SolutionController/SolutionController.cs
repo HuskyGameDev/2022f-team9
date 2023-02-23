@@ -15,13 +15,15 @@ public class SolutionController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Movable")) {
-            if (keyLeft.transform.rotation.z == 0 && keyRight.transform.rotation.z == 0) {
+            if (keyLeft.transform.eulerAngles.z <= 0.01f && keyRight.transform.eulerAngles.z <= 0.01f) {
                 // summon key
                 Debug.Log("Correct Solution!");
+                Debug.Log(keyLeft.transform.eulerAngles.z);
+                Debug.Log(keyRight.transform.eulerAngles.z);
                 key.SetActive(true);
             } else {
-                Debug.Log(keyLeft.transform.rotation);
-                Debug.Log(keyRight.transform.rotation);
+                Debug.Log(keyLeft.transform.eulerAngles.z);
+                Debug.Log(keyRight.transform.eulerAngles.z);
                 levelController.resetBoxPos();
                 keyLeft.transform.rotation = Quaternion.Euler(0, 0, 90);
                 keyRight.transform.rotation = Quaternion.Euler(0, 0, 180);
