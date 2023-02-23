@@ -10,6 +10,7 @@ public class TileScript : MonoBehaviour
 
     public int number;
 
+    public bool inRightPlace;
     void Awake()
     {
         targetPosition = transform.position;
@@ -24,9 +25,11 @@ public class TileScript : MonoBehaviour
         if(targetPosition == correctPosition)
         {
             _sprite.color = Color.green;
+            inRightPlace = true;
         }
         else
         {
+            inRightPlace = false;
             _sprite.color = Color.white;
         }
     }
