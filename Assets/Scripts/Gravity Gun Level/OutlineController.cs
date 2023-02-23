@@ -15,12 +15,12 @@ public class OutlineController : MonoBehaviour {
     public void changeOutline(int STATUS) {
         switch (STATUS) {
             case NO_OBJ:
-                Debug.Log("no obj");
+                //Debug.Log("no obj");
                 currentSprite.sprite = noObj;
                 break;
 
             case HAS_OBJ:
-                Debug.Log("has obj");
+                //Debug.Log("has obj");
                 currentSprite.sprite = hasObj;
                 break;
         }

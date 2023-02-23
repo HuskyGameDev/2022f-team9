@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GravGunController : MonoBehaviour {
 
-    private GameObject current;
+    public GameObject current;
     [SerializeField] GameObject player;
-    private Rigidbody2D currentBody;
+    public Rigidbody2D currentBody;
     [SerializeField] OutlineController outlineController;
 
     public int gravGunMaxSpeed;
@@ -33,7 +33,7 @@ public class GravGunController : MonoBehaviour {
                     //Debug.Log(current);
                     objState(true);
                 } else {
-                    Debug.Log("no object");
+                    //Debug.Log("no object");
                 }
             } else {
                 current = null; //drop current, hopefully
@@ -57,7 +57,7 @@ public class GravGunController : MonoBehaviour {
         }
     }
 
-    private void objState(bool arg) {
+    public void objState(bool arg) {
         if (arg) {
             hasObj = true;
             outlineController.changeOutline(2);
