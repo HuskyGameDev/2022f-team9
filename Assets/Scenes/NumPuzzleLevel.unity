@@ -3552,6 +3552,7 @@ GameObject:
   - component: {fileID: 1246997890}
   - component: {fileID: 1246997891}
   - component: {fileID: 1246997892}
+  - component: {fileID: 1246997893}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -3667,6 +3668,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6680478, y: 1.3489108}
   m_EdgeRadius: 0
+--- !u!114 &1246997893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246997888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0712feb09ba42844194e595d7064a0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptySpace: {fileID: 1503995212}
+  tiles:
+  - {fileID: 226771234}
+  - {fileID: 1678618007}
+  - {fileID: 321441408}
+  - {fileID: 1862334152}
+  - {fileID: 1832684176}
+  - {fileID: 1873406912}
+  - {fileID: 631467010}
+  - {fileID: 1454775710}
+  - {fileID: 1094204105}
+  - {fileID: 1386375569}
+  - {fileID: 1663647463}
+  - {fileID: 211800502}
+  - {fileID: 906957880}
+  - {fileID: 795023039}
+  - {fileID: 1479256090}
+  - {fileID: 0}
+  endPanel: {fileID: 914413194}
 --- !u!1 &1272447206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,7 +4870,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605025881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0712feb09ba42844194e595d7064a0db, type: 3}
   m_Name: 
