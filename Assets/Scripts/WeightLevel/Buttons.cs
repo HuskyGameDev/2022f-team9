@@ -9,6 +9,7 @@ public class Buttons : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
     public UnityEvent interactAct;
+    //Possibly remove debug.Log statments when done
 
     // Start is called before the first frame update
     void Start()

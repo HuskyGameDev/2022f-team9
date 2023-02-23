@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class WeightMeasurment : MonoBehaviour
 {
-
+    //can probably repurpose this for waypoints since no longer needed
     [SerializeField] private GameObject[] colliders;
-    int totalWeight;
-    //6,2,13,7
+    public int totalWeight;
+
+    //Each collider for each box
+    public CollisionDetector det1;
+    public CollisionDetector det2;
+    public CollisionDetector det3;
+    public CollisionDetector det4;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +28,19 @@ public class WeightMeasurment : MonoBehaviour
 
         int tempWeight = 0;
 
-        //NEEDS TO BE FINISHED
-        //if (colliders[0].getIfColl())
+        if (det1.getIfColl())
         {
             tempWeight = tempWeight + 6;
         }
-       // if (colliders[1].getIfColl())
+        if (det2.getIfColl())
         {
             tempWeight = tempWeight + 2;
         }
-        //if (colliders[2].getIfColl())
+        if (det3.getIfColl())
         {
             tempWeight = tempWeight + 13;
         }
-       // if (colliders[3].getIfColl())
+        if (det4.getIfColl())
         {
             tempWeight = tempWeight + 7;
         }
@@ -44,6 +49,8 @@ public class WeightMeasurment : MonoBehaviour
         {
             totalWeight = tempWeight;
         }
+
+        //After this move the platform based on the totalWeight
 
     }
 }
