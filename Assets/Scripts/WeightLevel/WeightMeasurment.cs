@@ -6,6 +6,7 @@ public class WeightMeasurment : MonoBehaviour
 {
     //can probably repurpose this for waypoints since no longer needed
     [SerializeField] private GameObject[] colliders;
+    //the total weight that is calculated
     public int totalWeight;
 
     //Each collider for each box
@@ -24,6 +25,15 @@ public class WeightMeasurment : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+        CalculateWeight();
+
+        //After this move the platform based on the totalWeight
+
+    }
+
+    void CalculateWeight()
     {
 
         int tempWeight = 0;
@@ -45,12 +55,17 @@ public class WeightMeasurment : MonoBehaviour
             tempWeight = tempWeight + 7;
         }
 
-        if(tempWeight != totalWeight)
+        if (tempWeight != totalWeight)
         {
             totalWeight = tempWeight;
         }
 
-        //After this move the platform based on the totalWeight
+    }
+
+    void RampMovement()
+    {
+
+        //code for moving ramp here
 
     }
 }

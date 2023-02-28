@@ -36,6 +36,7 @@ public class CollisionDetector : MonoBehaviour
 
     }
 
+    //just for getting weight measurment
     public bool getIfColl()
     {
 

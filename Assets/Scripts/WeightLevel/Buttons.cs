@@ -5,9 +5,11 @@ using UnityEngine.Events;
 
 public class Buttons : MonoBehaviour
 {
-
+    //true if player is in range, false otherwise
     public bool isInRange;
+    //key the player has to press to press the button
     public KeyCode interactKey;
+    //the action that the button performs
     public UnityEvent interactAct;
     //Possibly remove debug.Log statments when done
 
@@ -38,7 +40,7 @@ public class Buttons : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Player is in range");
+            //Debug.Log("Player is in range");
         }
     }
 
@@ -47,7 +49,7 @@ public class Buttons : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Player is not in range");
+            //Debug.Log("Player is not in range");
         }
     }
 }
