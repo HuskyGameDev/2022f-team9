@@ -7,6 +7,6 @@ public class StorySceneLoader : GenericLevelLoader
 {
     void OnEnable()
     {
-        LoadNextLevel();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

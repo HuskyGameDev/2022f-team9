@@ -2560,6 +2560,7 @@ GameObject:
   - component: {fileID: 1011234248}
   - component: {fileID: 1011234247}
   - component: {fileID: 1011234246}
+  - component: {fileID: 1011234249}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Elevator
@@ -2579,8 +2580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1b3556672a67442a3e96549c20cec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
-  transitionTime: 3
+  player: {fileID: 868005603}
 --- !u!61 &1011234247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2623,6 +2623,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1011234249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011234245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0616ba37fc14b734b9db70b60f78f256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 868005603}
 --- !u!1 &1066746088
 GameObject:
   m_ObjectHideFlags: 0
