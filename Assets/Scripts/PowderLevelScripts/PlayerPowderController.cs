@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerPowderController : MonoBehaviour {
 
-    [Header("0 = Red, 1 = Green, 2 = Blue")]
+    [Header("0 = White, 1 = Yellow, 2 = Blue, 3 = Red")]
     public int color;
 
 }

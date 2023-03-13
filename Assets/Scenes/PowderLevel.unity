@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 868005603}
-  color: 2
+  color: 0
   isInRange: 0
   interactKey: 102
   playerInteract:
@@ -2900,7 +2900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 868005603}
-  color: 0
+  color: 3
   isInRange: 0
   interactKey: 102
   playerInteract:
