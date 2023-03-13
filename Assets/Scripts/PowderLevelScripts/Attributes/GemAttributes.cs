@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GemAttributes : MonoBehaviour {
 
-    [Header("0 = Red, 1 = Green, 2 = Blue")]
+    [Header("0 = Red, 1 = Yellow, 2 = Blue")]
     public int color;
     private SpriteRenderer thisRenderer;
     [SerializeField] GameObject torch;
@@ -20,7 +20,7 @@ public class GemAttributes : MonoBehaviour {
                 torchAttributes.correctColor = 0;
                 break;
             case 1:
-                thisRenderer.color = new Color(0.1076006f, 0.735849f, 0.2071944f, 1f);
+                thisRenderer.color = new Color(0.96f, 0.96f, 0.078f, 1f);
                 torchAttributes.correctColor = 1;
                 break;
             case 2:

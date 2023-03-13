@@ -32,7 +32,7 @@ public class TorchAttributes : MonoBehaviour {
                 this.currentColor = 0;
                 break;
             case 1:
-                thisRenderer.color = new Color(0.1076006f, 0.735849f, 0.2071944f, 1f);
+                thisRenderer.color = new Color(0.96f, 0.96f, 0.078f, 1f);
                 this.currentColor = 1;
                 break;
             case 2:
