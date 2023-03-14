@@ -5,7 +5,8 @@ using UnityEngine;
 public class WeightMeasurment : MonoBehaviour
 {
     //can probably repurpose this for waypoints since no longer needed
-    [SerializeField] private GameObject[] colliders;
+    [SerializeField] private GameObject[] weightWaypoints;
+    //[SerializeField] private float speed = 2f;
     //the total weight that is calculated
     public int totalWeight;
 
@@ -62,10 +63,11 @@ public class WeightMeasurment : MonoBehaviour
 
     }
 
-    void RampMovement()
+    void BridgeMovement()
     {
 
-        //code for moving ramp here
+        //code for moving bridge here
+        //look at notecards for code
 
     }
 }
