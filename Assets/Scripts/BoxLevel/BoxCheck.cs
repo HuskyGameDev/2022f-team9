@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class BoxCheck : MonoBehaviour
 {
-    [SerializeField] GameObject four;
-    [SerializeField] GameObject three;
-    [SerializeField] GameObject two;
-    [SerializeField] GameObject one;
+    [SerializeField] GameObject fourRed;
+    [SerializeField] GameObject threeRed;
+    [SerializeField] GameObject twoRed;
+    [SerializeField] GameObject oneRed;
+
+    [SerializeField] GameObject fourGreen;
+    [SerializeField] GameObject threeGreen;
+    [SerializeField] GameObject twoGreen;
+    [SerializeField] GameObject oneGreen;
+
     [SerializeField] GameObject key;
     [SerializeField] GameObject platform;
 
@@ -41,39 +47,77 @@ public class BoxCheck : MonoBehaviour
     {
         if (collisionCounter == 0)
         {
-            four.SetActive(true);
-            three.SetActive(false);
-            two.SetActive(false);
-            one.SetActive(false);
+            fourRed.SetActive(true);
+            threeRed.SetActive(true);
+            twoRed.SetActive(true);
+            oneRed.SetActive(true);
+
+            fourGreen.SetActive(false);
+            threeGreen.SetActive(false);
+            twoGreen.SetActive(false);
+            oneGreen.SetActive(false);
         }
         else if (collisionCounter == 1)
         {
-            four.SetActive(false);
-            three.SetActive(true);
-            two.SetActive(false);
-            one.SetActive(false);
+            fourRed.SetActive(false);
+            threeRed.SetActive(true);
+            twoRed.SetActive(true);
+            oneRed.SetActive(true);
+
+            fourGreen.SetActive(true);
+            threeGreen.SetActive(false);
+            twoGreen.SetActive(false);
+            oneGreen.SetActive(false);
         }
         else if (collisionCounter == 2)
         {
-            four.SetActive(false);
-            three.SetActive(false);
-            two.SetActive(true);
-            one.SetActive(false);
+            fourRed.SetActive(false);
+            threeRed.SetActive(false);
+            twoRed.SetActive(true);
+            oneRed.SetActive(true);
+
+            fourGreen.SetActive(true);
+            threeGreen.SetActive(true);
+            twoGreen.SetActive(false);
+            oneGreen.SetActive(false);
         }
         else if (collisionCounter == 3)
         {
-            four.SetActive(false);
-            three.SetActive(false);
-            two.SetActive(false);
-            one.SetActive(true);
+            fourRed.SetActive(false);
+            threeRed.SetActive(false);
+            twoRed.SetActive(false);
+            oneRed.SetActive(true);
+
+            fourGreen.SetActive(true);
+            threeGreen.SetActive(true);
+            twoGreen.SetActive(true);
+            oneGreen.SetActive(false);
         }
         else if (collisionCounter == 4)
         {
-            four.SetActive(false);
-            three.SetActive(false);
-            two.SetActive(false);
-            one.SetActive(false);
+            fourRed.SetActive(false);
+            threeRed.SetActive(false);
+            twoRed.SetActive(false);
+            oneRed.SetActive(false);
+
+            fourGreen.SetActive(true);
+            threeGreen.SetActive(true);
+            twoGreen.SetActive(true);
+            oneGreen.SetActive(true);
+
             spawnKey();
+        }
+        else if (keySpawned == true)
+        {
+            fourRed.SetActive(false);
+            threeRed.SetActive(false);
+            twoRed.SetActive(false);
+            oneRed.SetActive(false);
+
+            fourGreen.SetActive(true);
+            threeGreen.SetActive(true);
+            twoGreen.SetActive(true);
+            oneGreen.SetActive(true);
         }
     }
 
