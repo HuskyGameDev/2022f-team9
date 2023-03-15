@@ -20,16 +20,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoxLevel.unity
     guid: 80e6d2c7a08d7d744b3acd6451f8b1ee
-  - enabled: 1
-    path: Assets/Scenes/PowerLevel.unity
-    guid: f85067deb617db148b0e599056dbe994
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Laser Level.unity
     guid: 0bab133d6a6002d4685140a7baccdc79
+  - enabled: 1
+    path: Assets/Scenes/Old Laser Level.unity
+    guid: 8ff1bd199a638ba4aa22c6c9b9f947aa
   - enabled: 1
     path: Assets/Scenes/PowderLevel.unity
     guid: 45ed01f92bce7824ea0058946750aa33
   - enabled: 1
     path: Assets/Scenes/Gravity Gun Level.unity
     guid: f36a4ca48b3551b468dde711f96f86b2
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 20311e08ba68a6f498a8376737343f0a
+  - enabled: 1
+    path: Assets/Scenes/PowerLevel.unity
+    guid: f85067deb617db148b0e599056dbe994
   m_configObjects: {}

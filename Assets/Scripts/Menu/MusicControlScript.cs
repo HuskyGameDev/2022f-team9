@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MusicControlScript : MonoBehaviour
-{
+public class MusicControlScript : MonoBehaviour {
     public static MusicControlScript instance; // Creates a static varible for a MusicControlScript instance
-
+    [SerializeField] Slider slider;
     private void Awake() // Runs before void Start()
     {
         DontDestroyOnLoad(this.gameObject); // Don't destroy this gameObject when loading different scenes
@@ -18,5 +18,9 @@ public class MusicControlScript : MonoBehaviour
         {
             Destroy(gameObject); // Destroy this gameObject
         }
+    }
+
+    public void ChangeVolume() {
+        AudioListener.volume = slider.value;
     }
 }
