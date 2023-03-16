@@ -20,6 +20,10 @@ public class MusicControlScript : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        AudioListener.volume = 0.2f;
+    }
+
     public void ChangeVolume() {
         AudioListener.volume = slider.value;
     }

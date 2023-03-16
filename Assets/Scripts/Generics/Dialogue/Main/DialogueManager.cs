@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue) {
 
-        anim.SetBool("IsOpen", true);
+        //anim.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
 
@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void EndDialogue() {
-        anim.SetBool("IsOpen", false);
+        //anim.SetBool("IsOpen", false);
     }
 
 }
