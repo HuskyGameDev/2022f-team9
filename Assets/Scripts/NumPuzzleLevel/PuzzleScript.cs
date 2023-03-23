@@ -7,7 +7,7 @@ public class PuzzleScript : MonoBehaviour
     private int emptySpaceIndex = 15;
     private Camera _camera;
     [SerializeField] public TileScript[] tiles;
-    [SerializeField] private ButtonControllerNumPuzzle buttonControllerNumPuzzle;
+    //[SerializeField] private ButtonControllerNumPuzzle buttonControllerNumPuzzle;
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
     // Start is called before the first frame update
@@ -15,7 +15,8 @@ public class PuzzleScript : MonoBehaviour
     {
         _camera = Camera.main;
         endPanel.SetActive(false);
-        Shuffle();
+        //disable shuffle here to test when puzzle is completed
+        //Shuffle();
         ShowBoard(false);
     }
 
@@ -70,8 +71,10 @@ public class PuzzleScript : MonoBehaviour
         if (_isFinished)
         {
            ShowBoard(false);
-            //playerMovement.runSpeed = 50;
+           //playerMovement.runSpeed = 50;
 
+            // Find the instance of ButtonControllerNumPuzzle and update the wallToScale active state
+            ButtonControllerNumPuzzle buttonControllerNumPuzzle = GameObject.FindObjectOfType<ButtonControllerNumPuzzle>();
             if (buttonControllerNumPuzzle != null)
             {
                 buttonControllerNumPuzzle.SetWallToScaleActive(false);
@@ -160,6 +163,11 @@ public class PuzzleScript : MonoBehaviour
                 {
                     continue;
                 }
+                var collider2D = tile.GetComponent<Collider2D>();
+                if (collider2D != null)
+                {
+                    collider2D.enabled = show;
+                }
                 var spriteRenderer = tile.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
@@ -199,6 +207,12 @@ public class PuzzleScript : MonoBehaviour
                 {
                     continue;
                 }
+                // Enable or disable the Collider2D component
+                var collider2D = tile.GetComponent<Collider2D>();
+                if (collider2D != null)
+                {
+                    collider2D.enabled = show;
+                }
                 var spriteRenderer = tile.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
@@ -231,6 +245,16 @@ public class PuzzleScript : MonoBehaviour
         }
         
 
+    }
+
+    public void SetTilesInOrder()
+    {
+        Debug.Log(tiles.Length);
+        for (int i=0; i<14; i++)
+        {
+            tiles[i].targetPosition = tiles[i].transform.position;
+        }
+        emptySpace.position = tiles[14].transform.position;
     }
 
    

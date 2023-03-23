@@ -49,5 +49,11 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
     public void SetWallToScaleActive (bool isActive)
     {
         wallToScale.SetActive(isActive);
+
+        if (isActive)
+        {
+            playerMovement.runSpeed = 50;
+         
+        }
     }
 }
