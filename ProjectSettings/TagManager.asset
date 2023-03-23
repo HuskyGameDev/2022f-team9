@@ -53,6 +53,9 @@ TagManager:
   - name: Background5
     uniqueID: 65238291
     locked: 0
+  - name: BlankSquare
+    uniqueID: 2758730755
+    locked: 0
   - name: Background4
     uniqueID: 1833723921
     locked: 0

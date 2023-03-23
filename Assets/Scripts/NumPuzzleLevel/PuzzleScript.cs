@@ -16,7 +16,7 @@ public class PuzzleScript : MonoBehaviour
         _camera = Camera.main;
         endPanel.SetActive(false);
         //disable shuffle here to test when puzzle is completed
-        //Shuffle();
+        Shuffle();
         ShowBoard(false);
     }
 
