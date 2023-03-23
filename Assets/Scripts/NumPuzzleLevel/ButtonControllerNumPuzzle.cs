@@ -41,8 +41,13 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
             {
                 pS.ShowBoard(true);
             }
-            wallToScale.SetActive(false);
+           // wallToScale.SetActive(false);
             
         }
+    }
+
+    public void SetWallToScaleActive (bool isActive)
+    {
+        wallToScale.SetActive(isActive);
     }
 }

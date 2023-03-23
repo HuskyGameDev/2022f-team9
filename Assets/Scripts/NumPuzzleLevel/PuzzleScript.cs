@@ -7,6 +7,7 @@ public class PuzzleScript : MonoBehaviour
     private int emptySpaceIndex = 15;
     private Camera _camera;
     [SerializeField] public TileScript[] tiles;
+    [SerializeField] private ButtonControllerNumPuzzle buttonControllerNumPuzzle;
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
     // Start is called before the first frame update
@@ -69,7 +70,12 @@ public class PuzzleScript : MonoBehaviour
         if (_isFinished)
         {
            ShowBoard(false);
-           //playerMovement.runSpeed = 50;
+            //playerMovement.runSpeed = 50;
+
+            if (buttonControllerNumPuzzle != null)
+            {
+                buttonControllerNumPuzzle.SetWallToScaleActive(false);
+            }
         } 
     }
 
