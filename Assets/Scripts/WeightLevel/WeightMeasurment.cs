@@ -6,8 +6,16 @@ public class WeightMeasurment : MonoBehaviour
 {
     //Array of all possible locations for the bridge
     [SerializeField] private GameObject[] weightWaypoints;
+
+    //Gate that blocks the player if the total weight is not correct
+    //Prevents the player from becoming stuck
+    [SerializeField] private GameObject[] gateWaypoints;
+    [SerializeField] private GameObject gate;
+    [SerializeField] private GameObject gateCollision;
+
     //How fast the bridge will move
     [SerializeField] private float speed = 2f;
+
     //The total weight that is calculated
     public int totalWeight;
 
@@ -30,8 +38,12 @@ public class WeightMeasurment : MonoBehaviour
     {
         //Calcultes the correct total weight
         CalculateWeight();
+
         //Moves the bridge based on the total weight
         BridgeMovement();
+
+        //Moves the gate to allow the player to move on at the correct time
+        GateMovement();
 
     }
 
@@ -142,6 +154,21 @@ public class WeightMeasurment : MonoBehaviour
 
         }
 
+    }
+
+    //Moves the gate at the right time
+    void GateMovement()
+    {
+        if (totalWeight == 9)
+        {
+            gate.transform.position = Vector2.MoveTowards(gate.transform.position, gateWaypoints[1].transform.position, Time.deltaTime * speed);
+            gateCollision.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
+        else
+        {
+            gate.transform.position = Vector2.MoveTowards(gate.transform.position, gateWaypoints[0].transform.position, Time.deltaTime * speed);
+            gateCollision.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
     }
 
 }

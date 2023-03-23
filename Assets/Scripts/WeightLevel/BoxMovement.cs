@@ -6,8 +6,10 @@ public class BoxMovement : MonoBehaviour
 {
     //waypoints for the boxes
     [SerializeField] private GameObject[] waypoints;
+
     //curent waypoint for the box
     private int waypointIndex = 0;
+
     //speed of box movement
     [SerializeField] private float speed = 2f;
 
