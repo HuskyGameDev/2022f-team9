@@ -36,7 +36,7 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.F))
         {
             playerMovement.runSpeed = 0;
-            Debug.Log("button pressed");
+           // Debug.Log("button pressed");
             if (pS != null)
             {
                 pS.ShowBoard(true);

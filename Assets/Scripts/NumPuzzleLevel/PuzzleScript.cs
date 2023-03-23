@@ -15,7 +15,7 @@ public class PuzzleScript : MonoBehaviour
         _camera = Camera.main;
         endPanel.SetActive(false);
         Shuffle();
-        //ShowBoard(true);
+        ShowBoard(false);
     }
 
 
@@ -157,7 +157,7 @@ public class PuzzleScript : MonoBehaviour
                 var spriteRenderer = tile.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
-                    spriteRenderer.sortingLayerName = "Foreground";
+                    spriteRenderer.sortingLayerName = "Background3";
                     spriteRenderer.sortingOrder = 1;
                 }
 
@@ -167,7 +167,7 @@ public class PuzzleScript : MonoBehaviour
                     var numSR = numObj.GetComponent<SpriteRenderer>();
                     if (numSR != null)
                     {
-                        numSR.sortingLayerName = "Foreground";
+                        numSR.sortingLayerName = "Background2";
                         numSR.sortingOrder = 1;
                     }
                 }
@@ -178,7 +178,7 @@ public class PuzzleScript : MonoBehaviour
                     var numSR2 = numObj2.GetComponent<SpriteRenderer>();
                     if (numSR2 != null)
                     {
-                        numSR2.sortingLayerName = "Foreground";
+                        numSR2.sortingLayerName = "Background2";
                         numSR2.sortingOrder = 1;
                     }
                 }
@@ -196,7 +196,7 @@ public class PuzzleScript : MonoBehaviour
                 var spriteRenderer = tile.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
-                    spriteRenderer.sortingLayerName = "Background4";
+                    spriteRenderer.sortingLayerName = "Background5";
                     spriteRenderer.sortingOrder = -1;
                 }
 
@@ -206,7 +206,7 @@ public class PuzzleScript : MonoBehaviour
                     var numSR = numObj.GetComponent<SpriteRenderer>();
                     if (numSR != null)
                     {
-                        numSR.sortingLayerName = "Background4";
+                        numSR.sortingLayerName = "Background5";
                         numSR.sortingOrder = -1;
                     }
                 }
@@ -217,7 +217,7 @@ public class PuzzleScript : MonoBehaviour
                     var numSR2 = numObj2.GetComponent<SpriteRenderer>();
                     if (numSR2 != null)
                     {
-                        numSR2.sortingLayerName = "Background4";
+                        numSR2.sortingLayerName = "Background5";
                         numSR2.sortingOrder = -1;
                     }
                 } 

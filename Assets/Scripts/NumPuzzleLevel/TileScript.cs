@@ -11,8 +11,8 @@ public class TileScript : MonoBehaviour
     public bool inRightPlace;
     void Awake()
     {
-        targetPosition = transform.position;
-        correctPosition = transform.position;
+       targetPosition = transform.position;
+       correctPosition = transform.position;
         _sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -27,7 +27,6 @@ public class TileScript : MonoBehaviour
         }
         else
         {
-            
             _sprite.color = Color.white;
             inRightPlace = false;
         }
