@@ -3514,6 +3514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallToScale: {fileID: 973648859}
+  buttonPressedSprite: {fileID: 21300000, guid: 8d2c32fab83142a46b281ce0660b848d, type: 3}
+  buttonNotPressedSprite: {fileID: 21300000, guid: eb6cd2f3f472d8d449744d47c74489a3, type: 3}
   playerMovement: {fileID: 0}
   pS: {fileID: 0}
 --- !u!61 &1246997892

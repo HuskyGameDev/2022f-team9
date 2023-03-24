@@ -7,11 +7,14 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
     public GameObject wallToScale;
 
     private bool isPlayerNearby = false;
-
+    public Sprite buttonPressedSprite;
+    public Sprite buttonNotPressedSprite;
+    private SpriteRenderer spriteRenderer;
     public PlayerMovement playerMovement;
     public PuzzleScript pS;
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         pS = GetComponent<PuzzleScript>();
     }
@@ -36,14 +39,18 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.F))
         {
             playerMovement.runSpeed = 0;
-           // Debug.Log("button pressed");
+            // Debug.Log("button pressed");
+            gameObject.GetComponent<SpriteRenderer>().sprite = buttonPressedSprite;
             if (pS != null)
             {
                 pS.ShowBoard(true);
             }
-           // wallToScale.SetActive(false);
-            
+            //spriteRenderer.sprite = buttonPressedSprite;
+            // wallToScale.SetActive(false);
+
         }
+       // gameObject.GetComponent<SpriteRenderer>().sprite = On;
+        //spriteRenderer.sprite = buttonPressedSprite;
     }
 
     public void SetWallToScaleActive (bool isActive)
