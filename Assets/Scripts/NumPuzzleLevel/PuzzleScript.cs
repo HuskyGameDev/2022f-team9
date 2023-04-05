@@ -71,8 +71,7 @@ public class PuzzleScript : MonoBehaviour
         if (_isFinished)
         {
            ShowBoard(false);
-           //playerMovement.runSpeed = 50;
-
+           
             // Find the instance of ButtonControllerNumPuzzle and update the wallToScale active state
             ButtonControllerNumPuzzle buttonControllerNumPuzzle = GameObject.FindObjectOfType<ButtonControllerNumPuzzle>();
             if (buttonControllerNumPuzzle != null)
