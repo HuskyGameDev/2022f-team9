@@ -33,6 +33,7 @@ public class LevelController : MonoBehaviour {
     [Header("Bools")]
     public bool[] cont = { false, false, false, false, false, false };
     public bool[] run = { false, false, false, false, false, false };
+    public bool canCont;
 
     private void Start() {
         detector0Controller = detector0.GetComponent<DetectorController>();
@@ -46,6 +47,7 @@ public class LevelController : MonoBehaviour {
         if (!run[0] && dM.currentElement == 2) {
             run[0] = true;
             cButton.SetActive(false);
+            canCont = false;
             StartCoroutine(Delay(val => cont[0] = val));
         }
         if (cont[0] && Input.GetButtonDown("Jump")) {
@@ -56,6 +58,7 @@ public class LevelController : MonoBehaviour {
         if (!run[1] && dM.currentElement == 4) {
             run[1] = true;
             cButton.SetActive(false);
+            canCont = false;
             StartCoroutine(DelayDetector(val => cont[1] = val, detector0));
         }
         if (cont[1] && detector0Controller.hitPlayer) {
@@ -67,6 +70,7 @@ public class LevelController : MonoBehaviour {
         if (!run[2] && dM.currentElement == 6) {
             run[2] = true;
             cButton.SetActive(false);
+            canCont = false;
             StartCoroutine(DelayDetector(val => cont[2] = val, detector1));
         }
         if (cont[2] && detector1Controller.hitPlayer) {
@@ -81,6 +85,7 @@ public class LevelController : MonoBehaviour {
             button.SetActive(true);
             buttonInteraction.SetActive(true);
             cButton.SetActive(false);
+            canCont = false;
             StartCoroutine(Delay(val => cont[3] = val));
         }
         if (cont[3] && buttonController.isPressed) {
@@ -90,6 +95,7 @@ public class LevelController : MonoBehaviour {
         if (!run[4] && dM.currentElement == 9) {
             run[4] = true;
             cButton.SetActive(false);
+            canCont = false;
             key.SetActive(true);
             key.GetComponent<BoxCollider2D>().enabled = true;
             StartCoroutine(Delay(val => cont[4] = val));
@@ -109,6 +115,7 @@ public class LevelController : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         dM.DisplayNextSentence();
         cButton.SetActive(true);
+        canCont = true;
     }
 
     private IEnumerator Delay(Action<bool> callback) {

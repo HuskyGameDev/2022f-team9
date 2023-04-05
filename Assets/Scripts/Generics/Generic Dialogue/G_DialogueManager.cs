@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour {
+public class G_DialogueManager : MonoBehaviour {
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -18,7 +18,13 @@ public class DialogueManager : MonoBehaviour {
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue) {
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            DisplayNextSentence();
+        }
+    }
+
+    public void StartDialogue(G_Dialogue dialogue) {
 
         //anim.SetBool("IsOpen", true);
 
@@ -53,7 +59,7 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
     }
 
