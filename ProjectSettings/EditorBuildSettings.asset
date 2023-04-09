@@ -27,14 +27,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Old Laser Level.unity
     guid: 8ff1bd199a638ba4aa22c6c9b9f947aa
   - enabled: 1
+    path: Assets/Scenes/WeightLevel.unity
+    guid: 7d768372e7c111e4185986c214f29361
+  - enabled: 1
     path: Assets/Scenes/PowderLevel.unity
     guid: 45ed01f92bce7824ea0058946750aa33
   - enabled: 1
     path: Assets/Scenes/Gravity Gun Level.unity
     guid: f36a4ca48b3551b468dde711f96f86b2
   - enabled: 1
-    path: Assets/Scenes/EndScreen.unity
-    guid: 20311e08ba68a6f498a8376737343f0a
+    path: Assets/Scenes/NumPuzzleLevel.unity
+    guid: a299732314e6ce5438ba73fc7ef0d0e2
   - enabled: 1
     path: Assets/Scenes/PowerLevel.unity
     guid: f85067deb617db148b0e599056dbe994
