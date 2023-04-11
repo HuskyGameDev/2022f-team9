@@ -7,6 +7,7 @@ public class PuzzleScript : MonoBehaviour
     private int emptySpaceIndex = 15;
     private Camera _camera;
     [SerializeField] public TileScript[] tiles;
+    [SerializeField] private SpriteRenderer blankSquareSpriteRenderer;
     //[SerializeField] private ButtonControllerNumPuzzle buttonControllerNumPuzzle;
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
@@ -153,7 +154,11 @@ public class PuzzleScript : MonoBehaviour
 
     public void ShowBoard(bool show)
     {
-       
+        if (blankSquareSpriteRenderer != null)
+        {
+            blankSquareSpriteRenderer.sortingLayerName = show ? "BlankSquare" : "Default";
+        }
+
         if (show)
         {
             foreach (var tile in tiles)
@@ -215,7 +220,7 @@ public class PuzzleScript : MonoBehaviour
                 var spriteRenderer = tile.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
-                    spriteRenderer.sortingLayerName = "Background5";
+                    spriteRenderer.sortingLayerName = "Default";
                     spriteRenderer.sortingOrder = -1;
                 }
 
@@ -225,7 +230,7 @@ public class PuzzleScript : MonoBehaviour
                     var numSR = numObj.GetComponent<SpriteRenderer>();
                     if (numSR != null)
                     {
-                        numSR.sortingLayerName = "Background5";
+                        numSR.sortingLayerName = "Default";
                         numSR.sortingOrder = -1;
                     }
                 }
@@ -236,7 +241,7 @@ public class PuzzleScript : MonoBehaviour
                     var numSR2 = numObj2.GetComponent<SpriteRenderer>();
                     if (numSR2 != null)
                     {
-                        numSR2.sortingLayerName = "Background5";
+                        numSR2.sortingLayerName = "Default";
                         numSR2.sortingOrder = -1;
                     }
                 } 

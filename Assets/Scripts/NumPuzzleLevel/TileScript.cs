@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TileScript : MonoBehaviour
 {
-
+    [SerializeField] private AudioClip correctSoundClip;
     public Vector3 targetPosition;
     private Vector3 correctPosition;
     private SpriteRenderer _sprite;
