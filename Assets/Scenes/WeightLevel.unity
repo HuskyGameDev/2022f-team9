@@ -1251,6 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 381883464}
+  animator: {fileID: 381883461}
   runSpeed: 45
   canJump: 0
 --- !u!114 &381883464
@@ -2848,6 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 868005610}
+  animator: {fileID: 0}
   runSpeed: 45
   canJump: 0
 --- !u!114 &868005610

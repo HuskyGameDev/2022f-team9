@@ -1851,6 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 868005610}
+  animator: {fileID: 868005613}
   runSpeed: 45
   canJump: 0
 --- !u!114 &868005610
@@ -1997,7 +1998,7 @@ MonoBehaviour:
   BButton: {fileID: 1066805429}
   YButton: {fileID: 1246153608}
   key: {fileID: 661902424}
-  player: {fileID: 868005603}
+  player: {fileID: 0}
   elevator: {fileID: 1011234245}
   buts: 00000000
 --- !u!1 &1011234245
@@ -2031,7 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1b3556672a67442a3e96549c20cec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 868005603}
+  player: {fileID: 0}
 --- !u!61 &1011234247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2087,7 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0616ba37fc14b734b9db70b60f78f256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 868005603}
+  player: {fileID: 0}
 --- !u!1 &1062807196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,7 +5499,7 @@ MonoBehaviour:
   BButton: {fileID: 1066805429}
   YButton: {fileID: 1246153608}
   key: {fileID: 0}
-  player: {fileID: 868005603}
+  player: {fileID: 0}
   elevator: {fileID: 1011234245}
   buts: 00000000
 --- !u!1 &2007063321

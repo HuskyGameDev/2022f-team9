@@ -8348,6 +8348,7 @@ GameObject:
   - component: {fileID: 868005609}
   - component: {fileID: 868005612}
   - component: {fileID: 868005614}
+  - component: {fileID: 868005615}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -8484,6 +8485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 868005610}
+  animator: {fileID: 868005615}
   runSpeed: 45
   canJump: 0
 --- !u!114 &868005610
@@ -8610,6 +8612,26 @@ CompositeCollider2D:
       - {x: -0.4308198, y: -0.9528198}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!95 &868005615
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868005603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a15e81e4576b1f4780a7264c58b8b04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &874608620
 GameObject:
   m_ObjectHideFlags: 0
