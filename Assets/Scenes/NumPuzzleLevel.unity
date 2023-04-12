@@ -668,10 +668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 12
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &217234750
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,10 +907,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 1
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &246781279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,10 +1318,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 3
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &380658014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,10 +1647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 7
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &672576612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,10 +2073,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 14
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &830719040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,10 +2486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 13
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &914413194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,10 +3024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 9
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1124057965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,7 +3201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f4af4188a5ab64791e1c9064037cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasKey: 0
+  hasKey: 1
   isInRange: 0
   hasGravGun: 0
   interactKey: 0
@@ -3681,6 +3681,7 @@ MonoBehaviour:
   - {fileID: 0}
   blankSquareSpriteRenderer: {fileID: 2022619201}
   endPanel: {fileID: 914413194}
+  puzzleCompleteSound: {fileID: 8300000, guid: fc7e3baba9b800e44912fd95900fa9c1, type: 3}
 --- !u!1 &1298692252
 GameObject:
   m_ObjectHideFlags: 0
@@ -8216,10 +8217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 10
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1412520423
 GameObject:
   m_ObjectHideFlags: 0
@@ -11019,10 +11020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 8
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1457056667
 GameObject:
   m_ObjectHideFlags: 0
@@ -11232,10 +11233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 15
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1503995211
 GameObject:
   m_ObjectHideFlags: 0
@@ -11729,10 +11730,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 11
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1678618003
 GameObject:
   m_ObjectHideFlags: 0
@@ -11858,10 +11859,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 2
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1726048578
 GameObject:
   m_ObjectHideFlags: 0
@@ -12432,10 +12433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 5
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1837646860
 GameObject:
   m_ObjectHideFlags: 0
@@ -12593,10 +12594,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 4
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1867442479
 GameObject:
   m_ObjectHideFlags: 0
@@ -12806,10 +12807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa4eba4741cea47b651305be5098e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSoundClip: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   number: 6
   inRightPlace: 0
+  correctSound: {fileID: 8300000, guid: 85153a0caa27a13468c7a97da23ca464, type: 3}
 --- !u!1 &1928289137
 GameObject:
   m_ObjectHideFlags: 0
@@ -12986,7 +12987,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 388899542f9abb24299e80c91971c857, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8773585, g: 0.8566661, b: 0.8566661, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

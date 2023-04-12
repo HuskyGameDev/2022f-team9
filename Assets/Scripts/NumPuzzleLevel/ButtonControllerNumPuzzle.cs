@@ -44,6 +44,7 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
             if (pS != null)
             {
                 pS.ShowBoard(true);
+                EnableTileSounds(true);
             }
             //spriteRenderer.sprite = buttonPressedSprite;
             // wallToScale.SetActive(false);
@@ -52,6 +53,16 @@ public class ButtonControllerNumPuzzle : MonoBehaviour
        // gameObject.GetComponent<SpriteRenderer>().sprite = On;
         //spriteRenderer.sprite = buttonPressedSprite;
     }
+
+    private void EnableTileSounds(bool enable)
+    {
+        TileScript[] tileScripts = GameObject.FindObjectsOfType<TileScript>();
+        foreach (TileScript tileScript in tileScripts)
+        {
+            tileScript.EnableSound(enable);
+        }
+    }
+
 
     public void SetWallToScaleActive (bool isActive)
     {

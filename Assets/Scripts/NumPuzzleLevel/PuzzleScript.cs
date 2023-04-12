@@ -11,9 +11,19 @@ public class PuzzleScript : MonoBehaviour
     //[SerializeField] private ButtonControllerNumPuzzle buttonControllerNumPuzzle;
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
+
+    [SerializeField] private AudioClip puzzleCompleteSound;
+    private AudioSource audioSource;
+    private bool puzzleCompleteSoundPlayed = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = puzzleCompleteSound;
+        audioSource.playOnAwake = false;
+
         _camera = Camera.main;
         endPanel.SetActive(false);
         //disable shuffle here to test when puzzle is completed
@@ -78,6 +88,12 @@ public class PuzzleScript : MonoBehaviour
             if (buttonControllerNumPuzzle != null)
             {
                 buttonControllerNumPuzzle.SetWallToScaleActive(false);
+            }
+            // Play the puzzle complete sound
+            if (!puzzleCompleteSoundPlayed)
+            {
+                audioSource.Play();
+                puzzleCompleteSoundPlayed = true;
             }
         } 
     }
@@ -261,5 +277,5 @@ public class PuzzleScript : MonoBehaviour
         emptySpace.position = tiles[14].transform.position;
     }
 
-   
+
 }
