@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1b3556672a67442a3e96549c20cec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1946445599}
 --- !u!61 &1011234247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0616ba37fc14b734b9db70b60f78f256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1946445599}
 --- !u!1 &1066746088
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,8 +3523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSwitched: 0
-  OffSprite: {fileID: 21300000, guid: f0f446b7b4b122944a2861a56355f4b7, type: 3}
-  OnSprite: {fileID: 21300000, guid: 8d2c32fab83142a46b281ce0660b848d, type: 3}
+  OffSprite: {fileID: -728938917, guid: c0e9ba6765eee7945866ceeba8934442, type: 3}
+  OnSprite: {fileID: -419768018, guid: c0e9ba6765eee7945866ceeba8934442, type: 3}
   interactKey: 102
   playerInv: {fileID: 0}
 --- !u!61 &1632522352
@@ -3544,7 +3544,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3594,7 +3594,7 @@ SpriteRenderer:
   m_SortingLayerID: -2112844095
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f0f446b7b4b122944a2861a56355f4b7, type: 3}
+  m_Sprite: {fileID: -728938917, guid: c0e9ba6765eee7945866ceeba8934442, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
