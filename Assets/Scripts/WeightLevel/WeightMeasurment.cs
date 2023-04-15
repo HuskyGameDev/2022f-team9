@@ -159,7 +159,10 @@ public class WeightMeasurment : MonoBehaviour
     //Moves the gate at the right time
     void GateMovement()
     {
-        if (totalWeight == 9)
+        //Determines if bridge is close enough to correct position to lower gate
+        float yPos = transform.position.y - weightWaypoints[5].transform.position.y;
+
+        if (totalWeight == 9 && (yPos < 0.1f && yPos > -0.1f))
         {
             gate.transform.position = Vector2.MoveTowards(gate.transform.position, gateWaypoints[1].transform.position, Time.deltaTime * speed);
             gateCollision.GetComponent<BoxCollider2D>().isTrigger = true;
