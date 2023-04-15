@@ -9,9 +9,17 @@ public class DoorController : MonoBehaviour {
     //[SerializeField] GameObject elevator;
     private GenericLevelLoader genericLevelLoader;
     private PlayerInv playerInv;
+    public Animator anim;
     private void Start() {
         playerInv = player.GetComponent<PlayerInv>();
         genericLevelLoader = GetComponent<GenericLevelLoader>();
+    }
+    private void Update()
+    {
+        if (playerInv.hasKey == true)
+        {
+            anim.SetBool("hasKey", true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
