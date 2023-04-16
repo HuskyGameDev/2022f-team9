@@ -4,32 +4,6 @@ using UnityEngine;
 
 public class PlatformFlash : MonoBehaviour
 {
-    /*
-    [SerializeField] private float flashInterval;
-    [SerializeField] private float buffer;
-    [SerializeField] GameObject platform1;
-    [SerializeField] GameObject platform2;
-    [SerializeField] GameObject platform3;
-    [SerializeField] GameObject platform4;
-
-    IEnumerator Start()
-    {
-        yield return new WaitForSeconds(buffer);
-        while (true)
-        {
-            platform1.SetActive(true);
-            platform2.SetActive(true);
-            platform3.SetActive(true);
-            platform4.SetActive(true);
-            yield return new WaitForSeconds(flashInterval);
-            platform1.SetActive(false);
-            platform2.SetActive(false);
-            platform3.SetActive(false);
-            platform4.SetActive(false);
-            yield return new WaitForSeconds(flashInterval);
-        }
-    }
-    */
         [SerializeField] private float flashInterval;
         [SerializeField] private float buffer;
         [SerializeField] private GameObject[] platforms;
@@ -43,7 +17,7 @@ public class PlatformFlash : MonoBehaviour
 
         int[] visiblePlatforms = GetNextPlatforms(0, 4);
         int[] hiddenPlatforms = GetNextPlatforms(4, 4);
-
+    
         while (true)
         {
             // Show the visible platforms and hide the hidden platforms
@@ -51,11 +25,25 @@ public class PlatformFlash : MonoBehaviour
             {
                 platforms[i].GetComponent<SpriteRenderer>().color = Color.white;
                 platforms[i].GetComponent<BoxCollider2D>().enabled = true;
+
+                SpriteRenderer[] renderers = platforms[i].GetComponentsInChildren<SpriteRenderer>();
+
+                for (int x = 0; x < renderers.Length; x++)
+                {
+                    renderers[x].color = Color.white;
+                }
             }
             foreach (int i in hiddenPlatforms)
             {
                 platforms[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.1f);
                 platforms[i].GetComponent<BoxCollider2D>().enabled = false;
+
+                SpriteRenderer[] renderers = platforms[i].GetComponentsInChildren<SpriteRenderer>();
+
+                for (int x = 0; x < renderers.Length; x++)
+                {
+                    renderers[x].color = new Color(1f, 1f, 1f, 0.1f);
+                }
             }
 
             yield return new WaitForSeconds(flashInterval);
@@ -65,11 +53,25 @@ public class PlatformFlash : MonoBehaviour
             {
                 platforms[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.1f);
                 platforms[i].GetComponent<BoxCollider2D>().enabled = false;
+
+                SpriteRenderer[] renderers = platforms[i].GetComponentsInChildren<SpriteRenderer>();
+
+                for (int x = 0; x < renderers.Length; x++)
+                {
+                    renderers[x].color = new Color(1f, 1f, 1f, 0.1f);
+                }
             }
             foreach (int i in hiddenPlatforms)
             {
                 platforms[i].GetComponent<SpriteRenderer>().color = Color.white;
                 platforms[i].GetComponent<BoxCollider2D>().enabled = true;
+
+                SpriteRenderer[] renderers = platforms[i].GetComponentsInChildren<SpriteRenderer>();
+
+                for (int x = 0; x < renderers.Length; x++)
+                {
+                    renderers[x].color = Color.white;
+                }
             }
 
             yield return new WaitForSeconds(flashInterval);
