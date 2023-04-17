@@ -8,7 +8,8 @@ public class G_DialogueManager : MonoBehaviour {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
-    public Animator anim;
+    //public Animator anim;
+    public bool endAnim;
 
     private Queue<string> sentences;
 
@@ -16,6 +17,7 @@ public class G_DialogueManager : MonoBehaviour {
 
     void Start() {
         sentences = new Queue<string>();
+        endAnim = false;
     }
 
     private void Update() {
@@ -64,7 +66,8 @@ public class G_DialogueManager : MonoBehaviour {
     }
 
     void EndDialogue() {
-        //anim.SetBool("IsOpen", false);
+        Debug.Log("Bananas");
+        endAnim = true;
     }
 
 }

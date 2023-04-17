@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
 		if (m_Grounded || m_AirControl) {
 
 			// If crouching
-			if (crouch) {
+			/*if (crouch) {
 				if (!m_wasCrouching) {
 					m_wasCrouching = true;
 					OnCrouchEvent.Invoke(true);
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour {
 					m_wasCrouching = false;
 					OnCrouchEvent.Invoke(false);
 				}
-			}
+			}*/
 
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);

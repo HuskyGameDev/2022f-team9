@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] LevelController levelController;
 
     public Animator anim;
+    public bool endAnim;
 
     private Queue<string> sentences;
 
@@ -66,6 +67,7 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue() {
         //anim.SetBool("IsOpen", false);
+        endAnim = true;
     }
 
 }

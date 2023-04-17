@@ -66,20 +66,8 @@ public class LevelController : MonoBehaviour {
             detector0.SetActive(false);
             StartCoroutine(NextSentenceDelay());
         }
-        
-        if (!run[2] && dM.currentElement == 6) {
-            run[2] = true;
-            cButton.SetActive(false);
-            canCont = false;
-            StartCoroutine(DelayDetector(val => cont[2] = val, detector1));
-        }
-        if (cont[2] && detector1Controller.hitPlayer) {
-            cont[2] = false;
-            detector1.SetActive(false);
-            StartCoroutine(NextSentenceDelay());
-        }
 
-        if (!run[3] && dM.currentElement == 8) {
+        if (!run[3] && dM.currentElement == 6) {
             run[3] = true;
             buttonBack.SetActive(true);
             button.SetActive(true);
@@ -92,7 +80,7 @@ public class LevelController : MonoBehaviour {
             cont[3] = false;
             StartCoroutine(NextSentenceDelay());
         }
-        if (!run[4] && dM.currentElement == 9) {
+        if (!run[4] && dM.currentElement == 7) {
             run[4] = true;
             cButton.SetActive(false);
             canCont = false;
@@ -105,7 +93,7 @@ public class LevelController : MonoBehaviour {
             StartCoroutine(NextSentenceDelay());
         }
 
-        if (!run[5] && dM.currentElement == 12) {
+        if (!run[5] && dM.currentElement == 10) {
             run[5] = true;
             StartCoroutine(DelayElevator(elevator));
         }
