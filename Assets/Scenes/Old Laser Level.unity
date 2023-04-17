@@ -24644,6 +24644,10 @@ PrefabInstance:
       value: DisplayNextSentence
       objectReference: {fileID: 0}
     - target: {fileID: 8434947470984120594, guid: 3c6fdeae59037924c81a04a714b375fe, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1805666462}
+    - target: {fileID: 8434947470984120594, guid: 3c6fdeae59037924c81a04a714b375fe, type: 3}
       propertyPath: dmObj
       value: 
       objectReference: {fileID: 1616499845}
