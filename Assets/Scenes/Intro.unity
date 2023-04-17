@@ -296,9 +296,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Orbital Labs is a secret research facility that is known for its experimental
-    technologies. Despite its public displays of incompetence, it continues to operate
-    with the support of upper management.
+  m_text: Orbital Labs; a research facility known for its secret experimental technologies
+    and public displays of incompetence, that only continues to operate with the
+    support of their gracious upper management.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2fecb312ce28d774f83b16c79f082727, type: 2}
   m_sharedMaterial: {fileID: 552118012272240356, guid: 2fecb312ce28d774f83b16c79f082727, type: 2}
@@ -433,9 +433,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The researchers plan to test a new high-tech collar developed by the animal
-    researchers, and they believe that the dog cannot do worse than some of the human
-    testers they have had.
+  m_text: 'With the animal researchers recently developing a new high-tech collar,
+    Orbital starts their newest test,
+
+    hoping this dog can''t do any worse than
+    some of the human testers they have had.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2fecb312ce28d774f83b16c79f082727, type: 2}
   m_sharedMaterial: {fileID: 552118012272240356, guid: 2fecb312ce28d774f83b16c79f082727, type: 2}
@@ -1011,9 +1013,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Orbital has recently called for volunteers to participate in their new
-    experiment, but due to their lack of information, they have made little progress.
-    Unexpectedly, they received a dog as their latest test subject.
+  m_text: Orbital has recently called for volunteers to participate in their new,
+    highly classified experiment, but few wish to sign on. Unexpectedly, they received
+    a dog as their latest test subject.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2fecb312ce28d774f83b16c79f082727, type: 2}
   m_sharedMaterial: {fileID: 552118012272240356, guid: 2fecb312ce28d774f83b16c79f082727, type: 2}
