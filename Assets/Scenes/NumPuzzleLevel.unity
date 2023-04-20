@@ -1001,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 2035356975}
     - target: {fileID: 2403380795729653635, guid: 9f3e5da5243a121479206bcb0effd911, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2403380795729653635, guid: 9f3e5da5243a121479206bcb0effd911, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -1013,12 +1013,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2403380795729653635, guid: 9f3e5da5243a121479206bcb0effd911, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Even the devs cant beat it.
+      value: If you manage to beat it, you'll have a pleasent suprise on the other
+        side of the elevator......
       objectReference: {fileID: 0}
     - target: {fileID: 2403380795729653635, guid: 9f3e5da5243a121479206bcb0effd911, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: If you manage to beat it, you'll have a pleasent suprise on the other
-        side of the elevator......
+      value: Even the devs cant beat it.
       objectReference: {fileID: 0}
     - target: {fileID: 2403380795729653637, guid: 9f3e5da5243a121479206bcb0effd911, type: 3}
       propertyPath: m_RootOrder
