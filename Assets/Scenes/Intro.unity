@@ -188,8 +188,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -325,8 +325,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -393,7 +393,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3, y: 4}
-  m_SizeDelta: {x: 700, y: 60}
+  m_SizeDelta: {x: 630, y: 50.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &289768650
 GameObject:
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -532,7 +532,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3, y: 4}
-  m_SizeDelta: {x: 700, y: 60}
+  m_SizeDelta: {x: 650, y: 50.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &400238288
 GameObject:
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 919378098}
   - component: {fileID: 919378097}
   - component: {fileID: 919378096}
-  - component: {fileID: 919378095}
+  - component: {fileID: 919378100}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -667,43 +667,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!320 &919378095
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919378094}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 3217905068820261678, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 245225140}
-  - key: {fileID: -783585504771042767, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 1600572820}
-  - key: {fileID: -303713716818877122, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 289768650}
-  - key: {fileID: 2989324607940706098, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 400238288}
-  - key: {fileID: 2034912428581338140, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 86784547}
-  - key: {fileID: -7723155110406246770, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 1317689943}
-  - key: {fileID: 6533776490463490128, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 7261354329010733335, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -3491447226029427911, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -3872416764821567705, guid: acde3a117a7ffb64dabc295a3478c8f3, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!114 &919378096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,6 +752,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!320 &919378100
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919378094}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -4016508983343761734, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+    value: {fileID: 245225140}
+  - key: {fileID: -5847261139082775537, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+    value: {fileID: 400238288}
+  - key: {fileID: 3805570600947974229, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+    value: {fileID: 1317689943}
+  - key: {fileID: -1887919794544517665, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+    value: {fileID: 1600572820}
+  - key: {fileID: 1196195666516578150, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+    value: {fileID: 289768650}
+  - key: {fileID: -3330977364783464941, guid: 261e94a198c3f0947a8f3e6098dd8950, type: 2}
+    value: {fileID: 86784547}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1269057468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,8 +1042,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1118,5 +1110,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3, y: 4}
-  m_SizeDelta: {x: 700, y: 60}
+  m_SizeDelta: {x: 630, y: 50.3}
   m_Pivot: {x: 0.5, y: 0.5}
